@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';7
+import React, {useState} from 'react';
 import Portal from '@/components/Portal'
 import { FaTimes } from 'react-icons/fa';
 import cn from '@/utils/cn'
@@ -12,8 +12,6 @@ interface ContactFormProps {
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{10}$/;
 
-console.log(process.env.NEXT_PUBLIC_API_URL)
-
 function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -21,9 +19,7 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
     const [servicio, setServicio] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    {
-        console.log(process.env.NEXT_PUBLIC_API_URL)
-    }
+
     const [errors, setErrors] = useState({
         name: false,
         email: false,
@@ -34,7 +30,9 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
 
     const onSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+        if (isSubmitting) return;
         setIsSubmitted(true);
+
         const newErrors = {
             name: name.trim() === '',
             email: !emailRegex.test(email),
@@ -44,11 +42,12 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
         setErrors(newErrors);
 
         if (newErrors.name || newErrors.email || newErrors.phone || newErrors.servicio) {
+
             return;
         }
 
         try {
-            const response = await fetch('https://video-debut-anniversary-amino.trycloudflare.com/api/leads', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/leads`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -75,13 +74,15 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
             setServicio('');
         }catch (error: any) {
             alert(error.message);
+            setIsSubmitting(false);
         }
-
     }
 
     const closeForm = () => {
         setIsFormOpen(false);
+
         setIsSubmitted(false);
+        setIsSubmitting(false);
         setValidForm(false);
         setErrors({
             name: false,
@@ -178,14 +179,18 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
                     </div>
                     <button
                         type="submit"
-                        disabled={isSubmitted && isValidForm}
+                        disabled={isSubmitting || isSubmitted}
                         className={cn(
-                            "w-fit transition-all duration-300 cursor-pointer font-semibold text-white py-4 px-24 rounded",
-                            "bg-[#4f5d32] hover:bg-[#29301A] active:bg-[#29301A] hover:shadow-lg",
-                            (isSubmitted && isValidForm) && "opacity-50 cursor-not-allowed pointer-events-none"
+                            "w-fit transition-all duration-300 font-semibold text-white py-4 px-24 rounded flex items-center justify-center gap-2",
+                            "bg-[#4f5d32] hover:bg-[#29301A] active:bg-[#29301A]",
+                            (isSubmitting || isSubmitted) && "opacity-50 cursor-not-allowed pointer-events-none"
                         )}
                     >
-                        ENVIAR
+                        {isSubmitting ? (
+                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        ) : (
+                            "ENVIAR"
+                        )}
                     </button>
                     { isSubmitted && isValidForm && (
                         <p className="text-green-700 text-center text-sm">Mensaje enviado exitosamente, <br/>serás contactado en
