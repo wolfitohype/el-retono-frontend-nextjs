@@ -1,0 +1,27 @@
+import React from 'react';
+
+interface IconProps {
+    className?: string;
+}
+
+function BulbIcon({className}: IconProps) {
+    return (
+        <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118.57 136.32">
+            <g id="Capa_2" data-name="Capa 2">
+                <g id="Capa_1-2" data-name="Capa 1">
+                    <path
+                        fill={"currentColor"} d="M48,136.32H70.56a3,3,0,0,0,3-3V117.74a3,3,0,0,0,1.26-2.44v-1.1A37.93,37.93,0,0,1,86,87.64a37.43,37.43,0,1,0-53.22.25,36.2,36.2,0,0,1,11,25.57v1.84A3,3,0,0,0,45,117.74v15.58A3,3,0,0,0,48,136.32Zm3-6v-12H67.56v12ZM37,83.64a31.15,31.15,0,0,1-9.16-23.58A31.43,31.43,0,1,1,81.73,83.44,44.1,44.1,0,0,0,68.86,112.3H49.73A42.19,42.19,0,0,0,37,83.64Z"/>
+                    <path fill={"currentColor"} d="M62.28,13.36V3a3,3,0,0,0-6,0V13.36a3,3,0,0,0,6,0Z"/>
+                    <path
+                        fill={"currentColor"} d="M101.2,16.08a3,3,0,0,0-4.24,0L89.64,23.4a3,3,0,1,0,4.17,4.32l.07-.07,7.32-7.33A3,3,0,0,0,101.2,16.08Z"/>
+                    <path
+                        fill={"currentColor"} d="M26.81,28.53a3,3,0,0,0,2.12-5.13l-7.32-7.32a3,3,0,0,0-4.32,4.17l.07.07,7.32,7.33A3,3,0,0,0,26.81,28.53Z"/>
+                    <path fill={"currentColor"} d="M3,55a3,3,0,0,0,0,6H13.36a3,3,0,0,0,0-6Z"/>
+                    <path fill={"currentColor"} d="M105.21,61h10.36a3,3,0,0,0,0-6H105.21a3,3,0,1,0,0,6Z"/>
+                </g>
+            </g>
+        </svg>
+    );
+}
+
+export default BulbIcon;

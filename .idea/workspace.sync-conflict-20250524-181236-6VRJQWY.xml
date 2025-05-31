@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41d8525b-215a-4f02-be64-4b60721bfc06" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/SVG/ShieldIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/badgeicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/bulbideaicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/cashicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/excellenceicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/gardentoolsicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/popularicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/topicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SVG/wellnessicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/industrialbg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/reviews/AS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/reviews/DM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/reviews/IC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/reviews/MT.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/serviciosbg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/slide1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/slide2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/slide3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/slide4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/slide5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/BadgeIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/BulbIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/CashIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ExcellenceIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/PopularIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ShieldIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ToolsIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/TopEstandarIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/WellnessIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContactButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContactButtonNavbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContactForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FeaturesCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ImageCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ItemCarousel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LinkButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ReviewCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Slideshow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/cn.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2xKhR4v6DXeP03tXN7143QzIiIo" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.next.config.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/webDev/el-retono-next",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.customizations",
+    "ts.external.directory.path": "C:\\Users\\ADMIN\\Desktop\\webDev\\el-retono-next\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Escritorio\webDev\el-retono-next\src\assets" />
+      <recent name="D:\Escritorio\webDev\el-retono-next\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Escritorio\webDev\el-retono-next\public\SVG" />
+      <recent name="D:\Escritorio\webDev\el-retono-next\public" />
+      <recent name="D:\Escritorio\webDev\el-retono-next\src\assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41d8525b-215a-4f02-be64-4b60721bfc06" name="Changes" comment="" />
+      <created>1747692660735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747692660735</updated>
+      <workItem from="1747692661766" duration="12654000" />
+      <workItem from="1747705738945" duration="6197000" />
+      <workItem from="1747752165745" duration="18848000" />
+      <workItem from="1747801658327" duration="664000" />
+      <workItem from="1747837934850" duration="28173000" />
+      <workItem from="1747920309827" duration="8536000" />
+      <workItem from="1748009260085" duration="3349000" />
+      <workItem from="1748043808288" duration="1239000" />
+      <workItem from="1748098948202" duration="148000" />
+      <workItem from="1748099172418" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
