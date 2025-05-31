@@ -20,7 +20,9 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
     const [phone, setPhone] = useState('');
     const [servicio, setServicio] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
-
+    {
+        console.log(process.env.NEXT_PUBLIC_API_URL)
+    }
     const [errors, setErrors] = useState({
         name: false,
         email: false,
