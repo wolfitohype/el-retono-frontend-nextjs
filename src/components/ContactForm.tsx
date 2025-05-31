@@ -12,6 +12,8 @@ interface ContactFormProps {
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{10}$/;
 
+console.log(process.env.NEXT_PUBLIC_API_URL)
+
 function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
