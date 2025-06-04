@@ -65,6 +65,62 @@ const slidesUrl = [
     '/slide5.jpg',
 ]
 
+export const metadata = {
+    title: "El Retoño Jardinería | Expertos en Jardinería en Tampico, Madero y Altamira",
+    description: "Transformamos tus áreas verdes en un paraíso. Más de 15 años ofreciendo servicios de jardinería profesional en Tampico, Madero y Altamira.",
+    keywords: [
+        "jardinería Tampico",
+        "servicios de jardinería",
+        "poda de árboles",
+        "diseño de jardines 3D",
+        "fumigación de jardines",
+        "mantenimiento de áreas verdes",
+        "El Retoño Jardinería"
+    ],
+    authors: [{ name: "El Retoño Jardinería", url: "https://elretono.org" }],
+    creator: "El Retoño Jardinería",
+    publisher: "El Retoño Jardinería",
+    openGraph: {
+        title: "El Retoño Jardinería",
+        description: "Expertos en jardinería para hogares y empresas. Calidad, confianza y belleza natural.",
+        url: "https://elretono.org",
+        siteName: "El Retoño Jardinería",
+        images: [
+            {
+                url: "https://elretono.org/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "El Retoño Jardinería - Jardines Profesionales en Tampico"
+            }
+        ],
+        locale: "es_MX",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "El Retoño Jardinería",
+        description: "Más de 15 años manteniendo jardines en Tampico, Madero y Altamira.",
+        images: ["https://elretono.org/og-image.jpg"],
+    },
+    metadataBase: new URL("https://elretono.org"),
+    alternates: {
+        canonical: "/",
+        languages: {
+            "es-MX": "/",
+        },
+    },
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            noimageindex: false,
+        },
+    }
+};
+
 function Page() {
     return (
         <>

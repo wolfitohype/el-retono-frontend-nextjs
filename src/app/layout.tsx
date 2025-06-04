@@ -3,14 +3,12 @@ import type {Metadata} from "next";
 import {Montserrat} from 'next/font/google';
 import CashIcon from "@/assets/CashIcon"
 import {FaWhatsapp, FaFacebook, FaInstagram, FaMoneyBillTransfer, FaCreditCard  } from "react-icons/fa6";
-import {IoMdMail, IoMdMenu} from "react-icons/io";
 import ContactButtonNavbar from "@/components/ContactButtonNavbar";
-
+import Head from "next/head";
 import Image from "next/image";
 import "./globals.css";
 import Link from "next/link";
 import React from "react";
-import MobileSideNavbar from "@/components/MobileSideNavbar";
 import MenuButtonNavbar from "@/components/MenuButtonNavbar";
 
 
@@ -21,8 +19,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-    title: "Servicios de Jardineria Tampico Madero Altamira - ElRetoño",
-    description: "Servicios de jardineria Tampico Madero Altamira residencial comercial industrial",
+    title: "Servicios de Jardineria Tampico Madero Altamira - El Retoño",
+    description: "Servicios de Jardineria Tampico Madero Altamira Residencial Comercial Industrial",
 };
 
 export default function RootLayout({
@@ -32,15 +30,61 @@ export default function RootLayout({
 }>) {
     const navLinks = [
         {label: 'INICIO', href: '#'},
-        {label: 'SERVICIOS', href: '#servicios'},
+        {label: 'SERVICIOS', href: '/servicios'},
         {label: 'GALERÍA', href: '/galeria'},
     ]
 
     return (
         <html lang="en">
+        <Head>
+            <title>Servicios de Jardinería Tampico Madero Altamira - El Retoño</title>
+            <meta
+                name="description"
+                content="Servicios de Jardinería residencial, comercial e industrial en Tampico, Madero y Altamira. Más de 15 años transformando exteriores."
+            />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="theme-color" content="#689a05" />
+
+            {/* OpenGraph */}
+            <meta property="og:title" content="El Retoño - Jardinería Profesional en Tampico" />
+            <meta property="og:description" content="Servicios de jardinería residencial, comercial e industrial en Tampico, Madero y Altamira." />
+            <meta property="og:image" content="/og-image.png" />
+            <meta property="og:url" content="https://elretono.org" />
+            <meta property="og:type" content="business.business" />
+
+            {/* JSON-LD de negocio local */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        name: "El Retoño",
+                        description: "Servicios de jardinería profesional en Tampico, Madero y Altamira.",
+                        url: "https://elretono.org",
+                        telephone: "+52 833 123 4567",
+                        email: "contacto@elretono.org",
+                        image: "https://elretono.org/logo.png",
+                        address: {
+                            "@type": "PostalAddress",
+                            addressLocality: "Tampico",
+                            addressRegion: "Tamaulipas",
+                            addressCountry: "MX",
+                        },
+                        openingHours: ["Mo-Su 08:00-20:00"],
+                        sameAs: [
+                            "https://www.facebook.com/profile.php?id=100071794055837",
+                            "https://www.instagram.com/elretono.tampico/",
+                            "https://wa.link/l9ejrd"
+                        ]
+                    })
+                }}
+            />
+        </Head>
         <body className={montserrat.variable + " overflow-x-hidden"}>
         <nav
-            className="bg-[#eff0d6] w-full h-24 flex items-center justify-around sticky top-0 z-30 shadow-md hidden lg:flex">
+            className="bg-[#eff0d6] w-full h-24 flex items-center justify-around sticky top-0 z-40 shadow-md hidden lg:flex">
             <Link href="/">
                 <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
                        className="h-[56px] w-auto cursor-pointer"/>
@@ -73,7 +117,7 @@ export default function RootLayout({
                 Servicios de jardineria residencial y empresarial a todo <span className="font-semibold">Tampico</span>, <span className="font-semibold">Madero</span> y <span className="font-semibold">Altamira</span>.
             </p>
         </div>
-        <nav className="bg-[#eff0d6] w-full h-24 flex items-center justify-between px-8 sticky top-0 z-30 shadow-md lg:hidden overflow-hidden">
+        <nav className="bg-[#eff0d6] w-full h-24 flex items-center justify-between px-8 sticky top-0 z-40 shadow-md lg:hidden overflow-hidden">
             <Link href="/">
                 <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
                        className="h-[56px] w-auto cursor-pointer"/>
@@ -140,7 +184,7 @@ export default function RootLayout({
                     </div>
                     <div className="flex flex-col space-y-4">
                         <p>Contáctanos</p>
-                        <p className="font-normal">contacto@elretoño.com</p>
+                        <p className="font-normal">contacto@elretono.org</p>
                     </div>
                 </div>
             </div>
@@ -203,7 +247,7 @@ export default function RootLayout({
                     </div>
                     <div className="flex flex-col items-center space-y-4">
                         <p className="text-3xl">Contáctanos</p>
-                        <p className="font-normal text-lg">contacto@elretoño.com</p>
+                        <p className="font-normal text-lg">contacto@elretono.org</p>
                     </div>
                 </div>
             </div>
