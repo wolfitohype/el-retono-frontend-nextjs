@@ -2,6 +2,7 @@
 import React from 'react';
 import cn from '@/utils/cn'
 import {FaTimes} from "react-icons/fa";
+import Link from "next/link";
 
 interface SideNavbarProps {
     isOpen: boolean;
@@ -10,7 +11,7 @@ interface SideNavbarProps {
 
 const navLinks = [
     {label: 'INICIO', href: '#'},
-    {label: 'SERVICIOS', href: '#servicios'},
+    {label: 'SERVICIOS', href: '/servicios'},
     {label: 'GALERÍA', href: '/galeria'},
 ]
 
@@ -36,9 +37,11 @@ function MobileSideNavbar({ isOpen, setIsOpen }: SideNavbarProps) {
                 <div className="h-full flex items-start justify-start">
                     <ul className="divide-y-0 divide-gray-500 flex flex-col w-full text-black">
                         {navLinks.map((navLink, index) => (
-                            <li
-                                className="text-xl font-medium py-4 px-6 even:bg-[#7c924f]/20 odd:bg-[#7c924f]/10 active:shadow-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
-                                key={index}>{navLink.label}</li>
+                            <Link href={navLink.href} key={index}>
+                                <li
+                                    className="text-xl font-medium py-4 px-6 even:bg-[#7c924f]/20 odd:bg-[#7c924f]/10 active:shadow-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+                                    key={index}>{navLink.label}</li>
+                            </Link>
                         ))}
                     </ul>
                 </div>
