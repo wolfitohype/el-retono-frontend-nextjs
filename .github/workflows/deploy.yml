@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Trigger CapRover build webhook
         run: |
-          curl -X GET "https://captain.elretono.org/api/v2/user/apps/webhooks/triggerbuild?namespace=captain&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InRva2VuVmVyc2lvbiI6ImZlMDMxMzY0LWE1MWItNGRkZS1hNThlLTY0NDljOWFlYmQ2MiIsImFwcE5hbWUiOiJlbHJldG9uby1mcm9udGVuZC1uZXh0anMiLCJuYW1lc3BhY2UiOiJjYXB0YWluIn0sImlhdCI6MTc1MDk4MDg1MH0.uev2ou-uVf8h2Dm-On9-dodm3aDKPtbD8qCQEs0YXE8"
+          curl -X GET "https://captain.elretono.org/api/v2/user/apps/webhooks/triggerbuild?namespace=captain&token=${{ secrets.CAPROVER_TOKEN }}"
