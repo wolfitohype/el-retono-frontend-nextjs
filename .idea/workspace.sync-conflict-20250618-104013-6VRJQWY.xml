@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41d8525b-215a-4f02-be64-4b60721bfc06" name="Changes" comment="added compressed images">
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/10.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/3.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/4.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/6.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/7.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/8.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/poda-arboles/9.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/10.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/11.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/12.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/3.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/4.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/5.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/6.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/7.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/8.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/servicios-media/venta-pasto/9.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/servicios/poda-arboles-tampico-madero-altamira/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/servicios/venta-pasto-tampico-madero-altamira/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CotizadorForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/servicios/jardineria-residencial-tampico-madero-altamira/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/servicios/jardineria-residencial-tampico-madero-altamira/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/servicios/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/servicios/page.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="wolitohype &lt;cjesusmarglz@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2xKhR4v6DXeP03tXN7143QzIiIo" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.next.config.ts.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/Desktop/webDev/el-retono-next/public/servicios-media/venta-pasto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ADMIN\\Desktop\\webDev\\el-retono-next\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\webDev\el-retono-next\public\servicios-media\venta-pasto" />
+      <recent name="C:\Users\ADMIN\Desktop\webDev\el-retono-next\public\servicios-media\poda-arboles" />
+      <recent name="C:\Users\ADMIN\Desktop\webDev\el-retono-next\public\poda-arboles" />
+      <recent name="C:\Users\ADMIN\Desktop\webDev\el-retono-next\public\servicios-media\mantenimiento-residencial" />
+      <recent name="C:\Users\ADMIN\Desktop\webDev\el-retono-next\public\servicios-media" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\webDev\el-retono-next\public\servicios-media" />
+      <recent name="C:\Users\ADMIN\Desktop\webDev\el-retono-next\src\components" />
+      <recent name="D:\Escritorio\webDev\el-retono-next\public\SVG" />
+      <recent name="D:\Escritorio\webDev\el-retono-next\public" />
+      <recent name="D:\Escritorio\webDev\el-retono-next\src\assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41d8525b-215a-4f02-be64-4b60721bfc06" name="Changes" comment="" />
+      <created>1747692660735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747692660735</updated>
+      <workItem from="1747692661766" duration="12654000" />
+      <workItem from="1747705738945" duration="6197000" />
+      <workItem from="1747752165745" duration="18848000" />
+      <workItem from="1747801658327" duration="664000" />
+      <workItem from="1747837934850" duration="28173000" />
+      <workItem from="1747920309827" duration="8536000" />
+      <workItem from="1748009260085" duration="3349000" />
+      <workItem from="1748043808288" duration="1239000" />
+      <workItem from="1748098948202" duration="148000" />
+      <workItem from="1748099172418" duration="7000" />
+      <workItem from="1748100003813" duration="15140000" />
+      <workItem from="1748135075309" duration="2676000" />
+      <workItem from="1748192952735" duration="1855000" />
+      <workItem from="1748294522446" duration="2833000" />
+      <workItem from="1748494932266" duration="725000" />
+      <workItem from="1748525872918" duration="10762000" />
+      <workItem from="1748558127492" duration="574000" />
+      <workItem from="1748659730148" duration="295000" />
+      <workItem from="1748696245485" duration="12413000" />
+      <workItem from="1748747236883" duration="5362000" />
+      <workItem from="1749002663003" duration="10475000" />
+      <workItem from="1749045527074" duration="19887000" />
+      <workItem from="1749067803409" duration="67000" />
+      <workItem from="1749067879077" duration="23000" />
+      <workItem from="1749067913483" duration="12381000" />
+      <workItem from="1749269537280" duration="4549000" />
+    </task>
+    <task id="LOCAL-00001" summary="log api url">
+      <option name="closed" value="true" />
+      <created>1748703481762</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748703481763</updated>
+    </task>
+    <task id="LOCAL-00002" summary="loggin api url v2">
+      <option name="closed" value="true" />
+      <created>1748703641051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748703641051</updated>
+    </task>
+    <task id="LOCAL-00003" summary="añadir estado isSubmitted para bloquear el button de enviar">
+      <option name="closed" value="true" />
+      <created>1748712402363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748712402363</updated>
+    </task>
+    <task id="LOCAL-00004" summary="disabling button while fetching v2">
+      <option name="closed" value="true" />
+      <created>1748724148514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748724148514</updated>
+    </task>
+    <task id="LOCAL-00005" summary="disabling button while fetching v2">
+      <option name="closed" value="true" />
+      <created>1748724185259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748724185259</updated>
+    </task>
+    <task id="LOCAL-00006" summary="disabling button while fetching v2">
+      <option name="closed" value="true" />
+      <created>1748724203729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748724203729</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added favicon.ico">
+      <option name="closed" value="true" />
+      <created>1748747534130</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748747534130</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added compressed images">
+      <option name="closed" value="true" />
+      <created>1749020462814</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749020462814</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="log api url" />
+    <MESSAGE value="loggin api url v2" />
+    <MESSAGE value="añadir estado isSubmitted para bloquear el button de enviar" />
+    <MESSAGE value="disabling button while fetching v2" />
+    <MESSAGE value="added favicon.ico" />
+    <MESSAGE value="added compressed images" />
+    <option name="LAST_COMMIT_MESSAGE" value="added compressed images" />
+  </component>
+</project>
