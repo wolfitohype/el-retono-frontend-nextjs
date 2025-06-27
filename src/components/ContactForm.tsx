@@ -13,6 +13,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{10}$/;
 
 function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
+    console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
