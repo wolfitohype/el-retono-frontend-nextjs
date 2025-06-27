@@ -144,7 +144,6 @@ function Page() {
                             ))}
                         </ul>
                         <ContactButton text={"CONTÁCTANOS"} className="rounded-lg bg-white px-6 py-3 font-semibold text-[#4f5d32] sm:px-8 sm:py-4"/>
-                        <CotizadorForm/>
                     </div>
                 </div>
                 {/*frase divider*/}
