@@ -172,7 +172,6 @@ function Page() {
                         </p>
                     </div>
                 </div>
-                <CotizadorForm/>
                 {/*/!*CTA divider*!/*/}
                 <div className="h-fit py-4 bg-[#4f5d32] flex items-center justify-center text-center w-full text-white flex-col space-y-3 cursor-default">
                     <p className="text-3xl font-semibold text-shadow-lg">Patio siempre verde y vibrante, a un clic de distancia</p>
