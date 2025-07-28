@@ -58,11 +58,11 @@ const serviciosEspecializados = [
 ]
 
 const slidesUrl = [
-    '/slide1.jpg',
-    '/slide2.jpg',
-    '/slide3.jpg',
-    '/slide4.jpg',
-    '/slide5.jpg',
+    '/slide1.webp',
+    '/slide2.webp',
+    '/slide3.webp',
+    '/slide4.webp',
+    '/slide5.webp',
 ]
 
 export const metadata = {
@@ -87,7 +87,7 @@ export const metadata = {
         siteName: "El Retoño Jardinería",
         images: [
             {
-                url: "https://elretono.org/og-image.png",
+                url: "https://elretono.org/og-image.webp",
                 width: 1200,
                 height: 630,
                 alt: "El Retoño Jardinería - Jardines Profesionales en Tampico"
@@ -100,7 +100,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "El Retoño Jardinería",
         description: "Más de 15 años manteniendo jardines en Tampico, Madero y Altamira.",
-        images: ["https://elretono.org/og-image.jpg"],
+        images: ["https://elretono.org/og-image.webp"],
     },
     metadataBase: new URL("https://elretono.org"),
     alternates: {
@@ -134,7 +134,7 @@ function Page() {
             </div>
             {/*hero section*/}
             <div className="h-130 md:h-[70vh] w-auto flex items-center justify-center relative z-20 cursor-default">
-                <Image src="/hero.jpg" fill
+                <Image src="/hero.webp" fill
                        alt="ARREGLO DE JARDIN CON PALMA EN MEDIO EL RETOÑO"
                        className="absolute object-cover object-[center_90%] brightness-50"/>
                 <div className="text-white absolute inset-0 items-center flex flex-col justify-center space-y-6">
@@ -153,7 +153,7 @@ function Page() {
             {/*servicios section medium breakpoint*/}
             <div className="md:h-[90dvh] lg:h-[80dvh] flex flex-col items-center justify-center relative z-0 overflow-hidden md:flex hidden  cursor-default">
                 {/*imagen de fondo*/}
-                <Image src="/serviciosbg.jpg" fill alt="ARREGLO DE JARDIN INDUSTRIAL TAMPICO"
+                <Image src="/serviciosbg.webp" fill alt="ARREGLO DE JARDIN INDUSTRIAL TAMPICO"
                        className="object-cover object-center brightness-50"/>
                 {/*corte diagonal*/}
                 <div className="absolute inset-0 z-10"
@@ -202,7 +202,7 @@ function Page() {
 
                 {/* Sección inferior con imagen de fondo*/}
                 <div
-                    className="w-full h-[100%] bg-[url('/serviciosbg.jpg')] bg-cover bg-center flex flex-col space-y-12 justify-center items-center relative z-0"> {/* Contenedor para la imagen y el contenido */}
+                    className="w-full h-[100%] bg-[url('/serviciosbg.webp')] bg-cover bg-center flex flex-col space-y-12 justify-center items-center relative z-0"> {/* Contenedor para la imagen y el contenido */}
                     {/*div para opacidad*/}
                     <div className="inset-0 size-full bg-black opacity-50 absolute"/>
                     {/*lista de servicios*/}
@@ -224,7 +224,7 @@ function Page() {
             {/*por que elegirnos section*/}
             <div className="h-fit md:flex w-full bg-[#f2f3e7]">
                 {/*div imagen fondo*/}
-                <div className="bg-[url('/serviciosbg.jpg')] w-1/2 absolute bg-cover bg-center relative z-0 hidden lg:flex">
+                <div className="bg-[url('/serviciosbg.webp')] w-1/2 absolute bg-cover bg-center relative z-0 hidden lg:flex">
                     {/*div para opacidad*/}
                     <div className="inset-0 size-full bg-black opacity-15 absolute"/>
                 </div>
@@ -255,7 +255,7 @@ function Page() {
                         image={WellnessIcon}
                         text="Promover el cuidado de áreas verdes, pues creemos que un jardín bien cuidado, brinda paz, alegría y bienestar con tan solo mirarlo."/>
                 </div>
-                <div className="bg-[url('/industrialbg.jpg')] w-1/2 absolute bg-cover bg-center relative z-0 hidden lg:flex">
+                <div className="bg-[url('/industrialbg.webp')] w-1/2 absolute bg-cover bg-center relative z-0 hidden lg:flex">
                     {/*div para opacidad*/}
                     <div className="inset-0 size-full bg-black opacity-35 absolute"/>
                 </div>
@@ -267,7 +267,7 @@ function Page() {
             </div>
             {/*reviews section medium breakpoint*/}
             <div className="h-[60vh] hidden md:flex w-full items-center justify-start cursor-default">
-                <div className="w-full h-full bg-[url('/industrialbg.jpg')] bg-cover bg-center flex items-center justify-between pr-8 relative z-0">
+                <div className="w-full h-full bg-[url('/industrialbg.webp')] bg-cover bg-center flex items-center justify-between pr-8 relative z-0">
                     {/*div para opacidad*/}
                     <div className="inset-0 h-full bg-black opacity-35 absolute"/>
                     <div className="w-4/6">

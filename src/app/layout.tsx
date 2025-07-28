@@ -49,7 +49,7 @@ export default function RootLayout({
             {/* OpenGraph */}
             <meta property="og:title" content="El Retoño - Jardinería Profesional en Tampico" />
             <meta property="og:description" content="Servicios de jardinería residencial, comercial e industrial en Tampico, Madero y Altamira." />
-            <meta property="og:image" content="/og-image.png" />
+            <meta property="og:image" content="/og-image.webp" />
             <meta property="og:url" content="https://elretono.org" />
             <meta property="og:type" content="business.business" />
 
@@ -84,7 +84,7 @@ export default function RootLayout({
         </Head>
         <body className={montserrat.variable + " overflow-x-hidden"}>
         <nav
-            className="bg-[#eff0d6] w-full h-24 flex items-center justify-around sticky top-0 z-40 shadow-md hidden lg:flex">
+            className="bg-[#eff0d6] w-full h-24 items-center justify-around sticky top-0 z-40 shadow-md hidden lg:flex">
             <Link href="/">
                 <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
                        className="h-[56px] w-auto cursor-pointer"/>
@@ -190,7 +190,7 @@ export default function RootLayout({
         </footer>
 
         {/*footer mobile*/}
-        <footer className="bg-[url('/footer.png')] w-full lg:hidden h-[120vh] flex items-center justify-center bg-cover bg-center cursor-default relative z-0">
+        <footer className="bg-[url('/footer.webp')] w-full lg:hidden h-[120vh] flex items-center justify-center bg-cover bg-center cursor-default relative z-0">
             {/*div para opacidad*/}
             <div className="inset-0 size-full bg-black opacity-55 absolute z-10"/>
             {/*contenedor principal*/}
