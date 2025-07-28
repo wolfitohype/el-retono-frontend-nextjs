@@ -29,9 +29,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     const navLinks = [
-        {label: 'INICIO', href: '#'},
+        {label: 'INICIO', href: '/'},
         {label: 'SERVICIOS', href: '/servicios'},
-        {label: 'GALERÍA', href: '/galeria'},
+        {label: 'CONTACTO', href: '/contacto'},
     ]
 
     return (
@@ -91,12 +91,11 @@ export default function RootLayout({
             </Link>
             <div className="flex items-center space-x-8">
                 {navLinks.map((link) => (
-                    <Link key={link.label} href={link.href}>
-                        <div className="flex flex-col justify-center cursor-pointer group">
+                    <Link key={link.label} href={link.href} replace>
+                        <span className="flex flex-col justify-center cursor-pointer group">
                             <p className="group-hover:brightness-120 transition-colors duration-300">{link.label}</p>
-                            <div
-                                className="h-[2px] w-full origin-center scale-x-0 bg-[#232323] transition-transform duration-300 group-hover:scale-x-100"></div>
-                        </div>
+                            <div className="h-[2px] w-full origin-center scale-x-0 bg-[#232323] transition-transform duration-300 group-hover:scale-x-100"/>
+                        </span>
                     </Link>
                 ))}
             </div>
@@ -104,9 +103,9 @@ export default function RootLayout({
                 <ContactButtonNavbar/>
                 <span
                     className="p-4 bg-[#689a05] active:bg-[#3F5D03] hover:bg-[#3F5D03] transition-all duration-300 rounded-md text-white cursor-pointer hover:shadow-lg">
-                    <Link href="https://wa.link/l9ejrd">
+                    <a href="https://wa.link/l9ejrd" target="_blank" rel="noreferrer">
                         <FaWhatsapp size={28}/>
-                    </Link>
+                    </a>
                 </span>
             </div>
         </nav>

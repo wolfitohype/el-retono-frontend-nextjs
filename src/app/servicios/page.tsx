@@ -13,9 +13,9 @@ const servicios: Servicio[] = [
     {name: 'Poda de árboles', imageUrl: '/servicios-media/poda-arboles.webp', link: '/poda-arboles-tampico-madero-altamira'},
     {name: 'Venta e instalación de pasto', imageUrl: '/servicios-media/pasto.webp', link: '/venta-pasto-tampico-madero-altamira'},
     {name: 'Fertilización de áreas verdes', imageUrl: '/servicios-media/fertilizacion.webp', link: '/fertilizacion-tampico-madero-altamira'},
-    {name: 'Fumigación de áreas verdes', imageUrl: '/servicios-media/serviciosbg.webp', link: '/fumigacion-tampico-madero-altamira'},
+    {name: 'Fumigación de áreas verdes', imageUrl: '/servicios-media/fumigacion.webp', link: '/fumigacion-tampico-madero-altamira'},
     {name: 'Póliza comercial de mantenimiento periódico', imageUrl: '/servicios-media/poliza.webp', link: '/mantenimiento-areas-verdes-tampico-madero-altamira'},
-    {name: 'Retiro de basura', imageUrl: '/servicios-media/serviciosbg.webp', link: '/retiro-basura-tampico-madero-altamira'},
+    {name: 'Retiro de basura', imageUrl: '/servicios-media/retiro-basura.webp', link: '/retiro-basura-tampico-madero-altamira'},
     {name: 'Diseño y previsualización 3D de áreas verdes', imageUrl: '/servicios-media/3d.webp', link: '/diseno-3d-jardin-tampico-madero-altamira'},
 ]
 
