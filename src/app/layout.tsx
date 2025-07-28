@@ -89,16 +89,17 @@ export default function RootLayout({
                 <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
                        className="h-[56px] w-auto cursor-pointer"/>
             </Link>
-            <div className="flex items-center space-x-8">
+            <ul className="flex items-center space-x-8">
                 {navLinks.map((link) => (
                     <Link key={link.label} href={link.href} replace>
-                        <span className="flex flex-col justify-center cursor-pointer group">
-                            <p className="group-hover:brightness-120 transition-colors duration-300">{link.label}</p>
-                            <div className="h-[2px] w-full origin-center scale-x-0 bg-[#232323] transition-transform duration-300 group-hover:scale-x-100"/>
-                        </span>
+                            <span className="flex flex-col justify-center cursor-pointer group">
+                                <p className="group-hover:brightness-120 transition-colors duration-300">{link.label}</p>
+                                <div
+                                    className="h-[2px] w-full origin-center scale-x-0 bg-[#232323] transition-transform duration-300 group-hover:scale-x-100"/>
+                            </span>
                     </Link>
                 ))}
-            </div>
+            </ul>
             <div className="flex items-center space-x-8 transition-colors duration-200">
                 <ContactButtonNavbar/>
                 <span
@@ -131,7 +132,7 @@ export default function RootLayout({
         <div id="portal-root"/>
         {children}
         {/*footer medium breakpoint*/}
-        <footer className="bg-[url('/footer.png')] w-full h-[60vh] hidden lg:flex items-center justify-center bg-cover bg-center cursor-default relative z-0">
+        <footer className="bg-[url('/footer.webp')] w-full h-[60vh] hidden lg:flex items-center justify-center bg-cover bg-center cursor-default relative z-0">
             {/*div para opacidad*/}
             <div className="inset-0 size-full bg-black opacity-55 absolute z-10"/>
             {/*contenedor principal*/}
