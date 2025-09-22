@@ -37,6 +37,14 @@ export default function RootLayout({
     return (
         <html lang="en">
         <Head>
+            <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSXRRPHW');</script>
+<!-- End Google Tag Manager -->
+
             <title>Servicios de Jardinería Tampico Madero Altamira - El Retoño</title>
             <meta
                 name="description"
@@ -83,6 +91,10 @@ export default function RootLayout({
             />
         </Head>
         <body className={montserrat.variable + " overflow-x-hidden"}>
+            <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSXRRPHW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
         <nav
             className="bg-[#eff0d6] w-full h-24 items-center justify-around sticky top-0 z-40 shadow-md hidden lg:flex">
             <Link href="/">
