@@ -37,14 +37,6 @@ export default function RootLayout({
     return (
         <html lang="en">
         <Head>
-            <!-- Google Tag Manager -->
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-NSXRRPHW');</script>
-            <!-- End Google Tag Manager -->
-
             <title>Servicios de Jardinería Tampico Madero Altamira - El Retoño</title>
             <meta
                 name="description"
@@ -91,10 +83,6 @@ export default function RootLayout({
             />
         </Head>
         <body className={montserrat.variable + " overflow-x-hidden"}>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSXRRPHW"
-                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
         <nav
             className="bg-[#eff0d6] w-full h-24 items-center justify-around sticky top-0 z-40 shadow-md hidden lg:flex">
             <Link href="/">
@@ -212,7 +200,7 @@ export default function RootLayout({
                 <div className="flex flex-col text-center justify-center items-center h-full space-y-8 z-20 w-full">
                     <Link href="/">
                         <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
-                               className="h-auto w-[260px] cursor-pointer bg-white rounded-2xl z-20"/>
+                              className="h-auto w-[260px] cursor-pointer bg-white rounded-2xl z-20"/>
                     </Link>
                     <p className="font-semibold">
                         Horario de atención:
