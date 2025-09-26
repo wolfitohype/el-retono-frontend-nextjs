@@ -6,6 +6,7 @@ import {FaWhatsapp, FaFacebook, FaInstagram, FaMoneyBillTransfer, FaCreditCard  
 import ContactButtonNavbar from "@/components/ContactButtonNavbar";
 import Head from "next/head";
 import Image from "next/image";
+import Script from "next/script";
 import "./globals.css";
 import Link from "next/link";
 import React from "react";
@@ -81,8 +82,35 @@ export default function RootLayout({
                     })
                 }}
             />
+
+            {/* Google Tag Manager Script */}
+            <Script
+                id="gtm-script"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-NSXRRPHW');
+                `
+                }}
+            />
+
         </Head>
         <body className={montserrat.variable + " overflow-x-hidden"}>
+
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-NSXRRPHW"
+                height="0"
+                width="0"
+                style={{display: 'none', visibility: 'hidden'}}
+            />
+        </noscript>
+
         <nav
             className="bg-[#eff0d6] w-full h-24 items-center justify-around sticky top-0 z-40 shadow-md hidden lg:flex">
             <Link href="/">
