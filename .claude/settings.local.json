@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Copy-Item \"src\\app\\landingB\\images\\logo.png\" -Destination \"public\\landingB\\logo.png\")",
+      "Bash(Copy-Item \"src\\app\\landingB\\images\\hero.jpg\" -Destination \"public\\landingB\\hero.jpg\")",
+      "Bash(Copy-Item \"src\\app\\landingB\\images\\about.jpg\" -Destination \"public\\landingB\\about.jpg\")",
+      "Bash(Copy-Item \"src\\app\\landingB\\images\\about2.png\" -Destination \"public\\landingB\\about2.png\")",
+      "Bash(Copy-Item \"src\\app\\landingB\\images\\icon-planta.png\" -Destination \"public\\landingB\\icon-planta.png\")",
+      "Bash(Copy-Item \"src\\app\\landingB\\images\\cta.jpg\" -Destination \"public\\landingB\\cta.jpg\")",
+      "Bash(npm run build:*)",
+      "Bash(dir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

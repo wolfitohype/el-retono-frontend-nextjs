@@ -4,7 +4,6 @@ import {Montserrat} from 'next/font/google';
 import CashIcon from "@/assets/CashIcon"
 import {FaWhatsapp, FaFacebook, FaInstagram, FaMoneyBillTransfer, FaCreditCard  } from "react-icons/fa6";
 import ContactButtonNavbar from "@/components/ContactButtonNavbar";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import "./globals.css";
@@ -37,22 +36,18 @@ export default function RootLayout({
 
     return (
         <html lang="en">
-        <Head>
-            <title>Servicios de Jardinería Tampico Madero Altamira - El Retoño</title>
-            <meta
-                name="description"
-                content="Servicios de Jardinería residencial, comercial e industrial en Tampico, Madero y Altamira. Más de 15 años transformando exteriores."
-            />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
-            <meta name="theme-color" content="#689a05" />
-
-            {/* OpenGraph */}
-            <meta property="og:title" content="El Retoño - Jardinería Profesional en Tampico" />
-            <meta property="og:description" content="Servicios de jardinería residencial, comercial e industrial en Tampico, Madero y Altamira." />
-            <meta property="og:image" content="/og-image.webp" />
-            <meta property="og:url" content="https://elretono.org" />
-            <meta property="og:type" content="business.business" />
+        <head>
+            {/* Google Tag Manager */}
+            <Script
+                id="gtm-script"
+                strategy="afterInteractive"
+            >
+                {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSXRRPHW');`}
+            </Script>
 
             {/* JSON-LD de negocio local */}
             <script
@@ -82,23 +77,7 @@ export default function RootLayout({
                     })
                 }}
             />
-
-            {/* Google Tag Manager Script */}
-            <Script
-                id="gtm-script"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-NSXRRPHW');
-                `
-                }}
-            />
-
-        </Head>
+        </head>
         <body className={montserrat.variable + " overflow-x-hidden"}>
 
         {/* Google Tag Manager (noscript) */}
