@@ -34,7 +34,7 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
         setIsSubmitted(true);
 
         const newErrors = {
-            name: name.trim().toUpperCase() === '',
+            name: name.trim() === '',
             email: !emailRegex.test(email),
             phone: !phoneRegex.test(phone),
             servicio: servicio.trim() === '',
@@ -54,7 +54,7 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
                 },
                 body: JSON.stringify(
                     {
-                        nombre: name,
+                        nombre: name.toUpperCase(),
                         correo_electronico: email,
                         telefono: phone,
                         servicio: servicio,
