@@ -55,10 +55,11 @@ function ContactForm({ isOpen, setIsFormOpen }: ContactFormProps) {
                 body: JSON.stringify(
                     {
                         nombre: name,
-                        email: email,
+                        correo_electronico: email,
                         telefono: phone,
                         servicio: servicio,
-                        fuente: "Web",
+                        fuente: "WEB",
+                        user_agent: navigator.userAgent,
                     }
                 )
             })
