@@ -47,11 +47,12 @@ function ContactCard() {
                 },
                 body: JSON.stringify(
                     {
-                        nombre: name,
-                        email: email,
+                        nombre: name.toUpperCase(),
+                        correo_electronico: email,
                         telefono: phone,
                         servicio: servicio,
-                        fuente: "Web",
+                        fuente: "WEB",
+                        user_agent: navigator.userAgent,
                     }
                 )
             })
