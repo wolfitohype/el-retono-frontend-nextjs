@@ -9,7 +9,7 @@ import HubSpotForm from '@/components/HubSpotForm';
 
 export const metadata: Metadata = {
   title: 'El Retoño Jardinería | Servicio Corporativo, Industrial y Comercial | Tampico',
-  description: 'Servicios de jardinería corporativa, industrial y comercial en Tampico, Madero y Altamira. Más de 15 años de experiencia. Registro REPSE. Cotiza sin compromiso.',
+  description: 'Jardinería corporativa e industrial en Tampico, Madero y Altamira. 15 años de experiencia, registro REPSE y facturación electrónica. Cotiza sin compromiso.',
   keywords: [
     "jardinería corporativa Tampico",
     "mantenimiento áreas verdes industrial",

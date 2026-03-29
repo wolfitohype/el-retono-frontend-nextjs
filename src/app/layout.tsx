@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         name: "El Retoño",
                         description: "Servicios de jardinería profesional en Tampico, Madero y Altamira.",
                         url: "https://elretono.org",
-                        telephone: "+52 833 123 4567",
+                        telephone: "+52 833 537 4089",
                         email: "contacto@elretono.org",
                         image: "https://elretono.org/logo.png",
                         address: {
@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             addressRegion: "Tamaulipas",
                             addressCountry: "MX",
                         },
-                        openingHours: ["Mo-Su 08:00-20:00"],
+                        openingHours: ["Mo-Sa 08:00-20:00"],
                         sameAs: [
                             "https://www.facebook.com/profile.php?id=100071794055837",
                             "https://www.instagram.com/elretono.tampico/",
