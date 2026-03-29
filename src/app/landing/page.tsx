@@ -8,8 +8,36 @@ import LandingBClientsMarquee from '@/components/LandingBClientsMarquee';
 import HubSpotForm from '@/components/HubSpotForm';
 
 export const metadata: Metadata = {
-  title: 'El Retoño - Expertos en Jardinería',
-  description: 'Embellece tus espacios verdes con los expertos en jardinería',
+  title: 'El Retoño Jardinería | Servicio Corporativo, Industrial y Comercial | Tampico',
+  description: 'Servicios de jardinería corporativa, industrial y comercial en Tampico, Madero y Altamira. Más de 15 años de experiencia. Registro REPSE. Cotiza sin compromiso.',
+  keywords: [
+    "jardinería corporativa Tampico",
+    "mantenimiento áreas verdes industrial",
+    "paisajismo comercial",
+    "jardinería empresarial Madero Altamira",
+    "poda profesional",
+    "El Retoño",
+  ],
+  openGraph: {
+    title: 'El Retoño | Jardinería Corporativa e Industrial en Tampico',
+    description: 'Expertos en paisajismo y mantenimiento de áreas verdes para empresas. Registro REPSE. Cotiza ahora.',
+    url: 'https://elretono.org/landing',
+    siteName: 'El Retoño Jardinería',
+    images: [{
+      url: 'https://elretono.org/og-image.webp',
+      width: 1200,
+      height: 630,
+      alt: 'El Retoño - Jardinería corporativa profesional en Tampico',
+    }],
+    locale: 'es_MX',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'El Retoño | Jardinería Corporativa en Tampico',
+    description: 'Servicios de jardinería corporativa e industrial. Más de 15 años. Registro REPSE.',
+    images: ['https://elretono.org/og-image.webp'],
+  },
 };
 
 export default function LandingBPage() {

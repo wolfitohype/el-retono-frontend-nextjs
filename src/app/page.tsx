@@ -134,12 +134,12 @@ function Page() {
             </div>
             {/*hero section*/}
             <div className="h-130 md:h-[70vh] w-auto flex items-center justify-center relative z-20 cursor-default">
-                <Image src="/hero.webp" fill
-                       alt="ARREGLO DE JARDIN CON PALMA EN MEDIO EL RETOÑO"
+                <Image src="/hero.webp" fill priority
+                       alt="Jardín profesional con palma diseñado por El Retoño en Tampico"
                        className="absolute object-cover object-[center_90%] brightness-50"/>
                 <div className="text-white absolute inset-0 items-center flex flex-col justify-center space-y-6">
-                    <p className="font-semibold text-4xl md:text-6xl text-center">SERVICIOS DE JARDINERIA
-                        PROFESIONAL</p>
+                    <h1 className="font-semibold text-4xl md:text-6xl text-center">SERVICIOS DE JARDINERIA
+                        PROFESIONAL</h1>
                     <p className="bg-[#F2F3E7] text-[#4f5d32] rounded-sm p-2 font-medium text-center w-[80dvw] md:w-auto">Convierte
                         tus áreas verdes en un paraíso con su belleza natural</p>
                     <ContactButton text="COTIZA YA" className="bg-[#7c924f] text-white px-6"/>
@@ -303,7 +303,7 @@ function Page() {
                     <h2 className="text-2xl font-bold">Clientes que nos recomiendan</h2>
                     <p className="block">Clientes residenciales y comerciales, que realmente nos recomiendan.</p>
                 </div>
-                <div className="w-full h-1/2 bg-[url('/industrialbg.jpg')] bg-cover bg-center flex items-center justify-between relative z-0">
+                <div className="w-full h-1/2 bg-[url('/industrialbg.webp')] bg-cover bg-center flex items-center justify-between relative z-0">
                     {/*div para opacidad*/}
                     <div className="inset-0 size-full bg-black opacity-35 absolute"/>
                     <div className="w-full">

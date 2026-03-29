@@ -31,7 +31,7 @@ function ReviewCard({profileUrl, name, rating, title, comments}: ProfileProps) {
                 <FaFacebook className="text-[#3b5998] size-6"/>
             </div>
             <div className="w-full border-gray-200 border-t pt-2">
-                <p className="font-light text-gray-400">{comments}</p>
+                <p className="font-light text-gray-600">{comments}</p>
             </div>
         </div>
     );

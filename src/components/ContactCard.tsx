@@ -21,6 +21,7 @@ function ContactCard() {
         servicio: false,
     });
     const [isValidForm, setValidForm] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const onSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
@@ -67,8 +68,8 @@ function ContactCard() {
             setPhone('');
             setServicio('');
         } catch (error: any) {
-            alert(error.message);
             setIsSubmitting(false);
+            setErrorMessage(error.message || 'Ocurrió un error al enviar. Intenta de nuevo.');
         }
     }
 
@@ -86,57 +87,73 @@ function ContactCard() {
             </div>
 
             <div className="w-full flex flex-col space-y-1">
+                <label htmlFor="card-name" className="text-sm font-medium text-gray-700">Nombre <span className="text-red-500">*</span></label>
                 <input
+                id="card-name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Nombre"
-                className="w-full p-2 rounded-lg focus:outline-none focus:shadow-2xl bg-gray-100 text-black border border-gray-300 transition-all duration-200"
+                placeholder="Tu nombre completo"
+                aria-required="true"
+                aria-invalid={isSubmitted && errors.name}
+                className="w-full p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7c924f] bg-gray-100 text-black border border-gray-300 transition-all duration-200"
             />
                 {isSubmitted && errors.name && (
-                    <p className="text-red-400 text-sm">Nombre inválido</p>
+                    <p className="text-red-500 text-sm" role="alert">Nombre es obligatorio</p>
                 )}
             </div>
             <div className="w-full flex flex-col space-y-1">
+                <label htmlFor="card-email" className="text-sm font-medium text-gray-700">Correo electrónico <span className="text-red-500">*</span></label>
                 <input
+                    id="card-email"
                     type="email"
                     value={email}
                     onChange={(e) => {
                         const cleaned = e.target.value.replace(/[^a-zA-Z0-9@._-]/g, '');
                         setEmail(cleaned);
                     }}
-                    placeholder="Correo electrónico"
-                    className="w-full p-2 rounded-lg focus:outline-none focus:shadow-2xl bg-gray-100 text-black border border-gray-300 transition-all duration-200"
+                    placeholder="tu@correo.com"
+                    aria-required="true"
+                    aria-invalid={isSubmitted && errors.email}
+                    className="w-full p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7c924f] bg-gray-100 text-black border border-gray-300 transition-all duration-200"
                 />
                 {isSubmitted && errors.email && (
-                    <p className="text-red-400 text-sm">Correo electrónico inválido</p>
+                    <p className="text-red-500 text-sm" role="alert">Correo electrónico inválido</p>
                 )}
             </div>
             <div className="w-full flex flex-col space-y-1">
+                <label htmlFor="card-phone" className="text-sm font-medium text-gray-700">Teléfono (10 dígitos) <span className="text-red-500">*</span></label>
                 <input
+                    id="card-phone"
                     type="tel"
                     value={phone}
                     onChange={(e) => {
                         const cleaned = e.target.value.replace(/\D/g, '').slice(0, 10);
                         setPhone(cleaned);
                     }}
-                    placeholder="Número telefónico"
-                    className="w-full p-2 rounded-lg focus:outline-none focus:shadow-2xl bg-gray-100 text-black border border-gray-300 transition-all duration-200"
+                    placeholder="8331234567"
+                    aria-required="true"
+                    aria-invalid={isSubmitted && errors.phone}
+                    className="w-full p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7c924f] bg-gray-100 text-black border border-gray-300 transition-all duration-200"
                 />
                 {isSubmitted && errors.phone && (
-                    <p className="text-red-400 text-sm">Número telefónico inválido</p>
+                    <p className="text-red-500 text-sm" role="alert">Número telefónico inválido (10 dígitos)</p>
                 )}
             </div>
             <div className="w-full flex flex-col space-y-1">
+                <label htmlFor="card-servicio" className="text-sm font-medium text-gray-700">Servicio de interés <span className="text-red-500">*</span></label>
                 <input
+                    id="card-servicio"
                     type="text"
                     value={servicio}
                     onChange={(e) => setServicio(e.target.value)}
-                    placeholder="Servicio que te interesa"
-                    className="w-full p-2 rounded-lg focus:outline-none focus:shadow-2xl bg-gray-100 text-black border border-gray-300 transition-all duration-200"
+                    placeholder="Ej: Poda de árboles, diseño de jardín..."
+                    aria-required="true"
+                    aria-invalid={isSubmitted && errors.servicio}
+                    className="w-full p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7c924f] bg-gray-100 text-black border border-gray-300 transition-all duration-200"
                 />
                 {isSubmitted && errors.servicio && (
-                    <p className="text-red-400 text-sm">Campo es obligatorio</p>
+                    <p className="text-red-500 text-sm" role="alert">Campo es obligatorio</p>
                 )}
             </div>
             <button
@@ -144,7 +161,7 @@ function ContactCard() {
                 disabled={isSubmitting || isSubmitted}
                 className={cn(
                     "w-fit transition-all duration-300 font-semibold text-white py-4 px-24 rounded flex items-center justify-center gap-2",
-                    "bg-[#4f5d32] hover:bg-[#29301A] active:bg-[#29301A]",
+                    "bg-[#4f5d32] hover:bg-[#29301A] active:bg-[#29301A] focus:outline-none focus:ring-2 focus:ring-[#7c924f] focus:ring-offset-2",
                     (isSubmitting || isSubmitted) && "opacity-50 cursor-not-allowed pointer-events-none"
                 )}
             >
@@ -154,9 +171,11 @@ function ContactCard() {
                     "ENVIAR"
                 )}
             </button>
+            {errorMessage && (
+                <p className="text-red-600 text-center text-sm bg-red-50 p-3 rounded-md" role="alert">{errorMessage}</p>
+            )}
             { isSubmitted && isValidForm && (
-                <p className="text-green-700 text-center text-sm">Mensaje enviado exitosamente, <br/>serás contactado en
-                los siguientes minutos.</p>
+                <p className="text-green-700 text-center text-sm bg-green-50 p-3 rounded-md" role="status">Mensaje enviado exitosamente. Serás contactado en los siguientes minutos.</p>
             )}
         </form>
     );

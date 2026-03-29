@@ -1,6 +1,41 @@
 import React from 'react';
+import type {Metadata} from "next";
 import ServiciosCard from "@/components/ServiciosCard";
 import ContactButton from "@/components/ContactButton";
+
+export const metadata: Metadata = {
+    title: "Servicios de Jardinería Profesional | El Retoño | Tampico, Madero y Altamira",
+    description: "Conoce todos nuestros servicios de jardinería profesional: poda de árboles, diseño 3D, fumigación, fertilización, venta de pasto y más en Tampico, Madero y Altamira.",
+    keywords: [
+        "servicios jardinería Tampico",
+        "poda de árboles",
+        "diseño de jardines",
+        "fumigación",
+        "fertilización",
+        "venta de pasto",
+        "mantenimiento áreas verdes",
+    ],
+    openGraph: {
+        title: "Servicios de Jardinería | El Retoño",
+        description: "Servicios profesionales de jardinería residencial, comercial e industrial en la zona conurbada de Tampico.",
+        url: "https://elretono.org/servicios",
+        siteName: "El Retoño Jardinería",
+        images: [{
+            url: "https://elretono.org/og-image.webp",
+            width: 1200,
+            height: 630,
+            alt: "Servicios de jardinería profesional El Retoño"
+        }],
+        locale: "es_MX",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Servicios de Jardinería | El Retoño",
+        description: "Poda, diseño 3D, fumigación, fertilización y más en Tampico, Madero y Altamira.",
+        images: ["https://elretono.org/og-image.webp"],
+    },
+};
 
 interface Servicio {
     imageUrl: string;

@@ -10,9 +10,9 @@ interface SideNavbarProps {
 }
 
 const navLinks = [
-    {label: 'INICIO', href: '#'},
+    {label: 'INICIO', href: '/'},
     {label: 'SERVICIOS', href: '/servicios'},
-    {label: 'GALERÍA', href: '/galeria'},
+    {label: 'CONTACTO', href: '/contacto'},
 ]
 
 function MobileSideNavbar({ isOpen, setIsOpen }: SideNavbarProps) {

@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
 import {FaCheckCircle} from "react-icons/fa";
 import ContactButton from "@/components/ContactButton";
 import ImageShowcase from "@/components/UI/ImageShowcase";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
     title: 'Poda de árboles | Jardinería El Retoño',
@@ -72,48 +72,51 @@ const imagesGeneral = [
 function Page() {
     return (
         <>
-            <Head>
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "LocalBusiness",
-                        "name": "Jardinería El Retoño",
-                        "image": "https://elretono.org/logo.png",
-                        "logo": "https://elretono.org/logo.png",
-                        "email":"contacto@elretono.org",
-                        "url": "https://www.elretono.org",
-                        "telephone": "+52 833 537 4089",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressLocality": "Tampico",
-                            "addressRegion": "Tamaulipas",
-                            "addressCountry": "MX"
-                        },
-                        "sameAs":[
-                            "https://www.facebook.com/profile.php?id=100071794055837",
-                            "https://www.instagram.com/elretono.tampico/",
-                            "https://wa.link/l9ejrd",
+            <Breadcrumbs items={[
+                { label: 'Inicio', href: '/' },
+                { label: 'Servicios', href: '/servicios' },
+                { label: 'Poda de árboles' },
+            ]} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Jardinería El Retoño",
+                    "image": "https://elretono.org/logo.png",
+                    "logo": "https://elretono.org/logo.png",
+                    "email":"contacto@elretono.org",
+                    "url": "https://www.elretono.org",
+                    "telephone": "+52 833 537 4089",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Tampico",
+                        "addressRegion": "Tamaulipas",
+                        "addressCountry": "MX"
+                    },
+                    "sameAs":[
+                        "https://www.facebook.com/profile.php?id=100071794055837",
+                        "https://www.instagram.com/elretono.tampico/",
+                        "https://wa.link/l9ejrd",
+                    ],
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://www.elretono.org/servicios/poda-arboles-tampico-madero-altamira"
+                    },
+                    "priceRange": "$$",
+                    "description": "Poda de árboles y retiro de basura en Tampico, Madero y Altamira. Jardineros de confianza, servicios facturables y atención profesional.",
+                    "areaServed": [
+                        { "@type": "Place", "name": "Tampico" },
+                        { "@type": "Place", "name": "Ciudad Madero" },
+                        { "@type": "Place", "name": "Altamira" }
+                    ],
+                    "openingHoursSpecification": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": [
+                            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
                         ],
-                        "mainEntityOfPage": {
-                            "@type": "WebPage",
-                            "@id": "https://www.elretono.org/servicios/poda-arboles-tampico-madero-altamira"
-                        },
-                        "priceRange": "$$",
-                        "description": "Poda de árboles y retiro de basura en Tampico, Madero y Altamira. Jardineros de confianza, servicios facturables y atención profesional.",
-                        "areaServed": [
-                            { "@type": "Place", "name": "Tampico" },
-                            { "@type": "Place", "name": "Ciudad Madero" },
-                            { "@type": "Place", "name": "Altamira" }
-                        ],
-                        "openingHoursSpecification": {
-                            "@type": "OpeningHoursSpecification",
-                            "dayOfWeek": [
-                                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-                            ],
-                            "opens": "08:00",
-                            "closes": "18:00"
-                        }
-                    }) }} />
-            </Head>
+                        "opens": "08:00",
+                        "closes": "18:00"
+                    }
+                }) }} />
             <div className="w-full h-fit flex flex-col items-center justify-center">
                 {/*hero*/}
                 <div

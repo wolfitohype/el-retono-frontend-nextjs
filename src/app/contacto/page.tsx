@@ -30,6 +30,12 @@ export const metadata = {
         locale: "es_MX",
         type: "website",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contacto | El Retoño Jardinería",
+        description: "Contáctanos para servicios de jardinería profesional en Tampico, Madero y Altamira.",
+        images: ["https://elretono.org/og-image.webp"],
+    },
 };
 
 // Contact information items

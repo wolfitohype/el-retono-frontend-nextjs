@@ -32,7 +32,7 @@ export default function Slideshow({ slidesUrl, children }: SlideshowProps) {
             {fadeIn && (
                 <Image
                     src={slidesUrl[currentIndex]}
-                    alt=""
+                    alt="Proyecto de jardinería realizado por El Retoño"
                     priority
                     fill
                     sizes="100vw"
@@ -53,7 +53,7 @@ export default function Slideshow({ slidesUrl, children }: SlideshowProps) {
             {loadedImage && (
                 <Image
                     src={loadedImage}
-                    alt=""
+                    alt="Proyecto de jardinería realizado por El Retoño"
                     priority
                     fill
                     sizes="100vw"

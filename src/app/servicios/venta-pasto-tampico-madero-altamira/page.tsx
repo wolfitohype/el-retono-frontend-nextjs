@@ -1,34 +1,34 @@
 import React from 'react';
-import Head from 'next/head';
 import {FaCheckCircle} from "react-icons/fa";
 import ContactButton from "@/components/ContactButton";
 import ImageShowcase from "@/components/UI/ImageShowcase";
 import CotizadorForm from "@/components/CotizadorForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
-    title: 'Poda de árboles | Jardinería El Retoño',
-    description: 'Servicio de poda de árboles con retiro de basura incluido. Planes flexibles, facturación disponible. ¡Contáctanos hoy!',
+    title: 'Venta e Instalación de Pasto | Jardinería El Retoño',
+    description: 'Venta e instalación de pasto japonés y San Agustín en Tampico, Madero y Altamira. Pasto de la mejor calidad con instalación profesional. ¡Cotiza hoy!',
     keywords: [
-        'mantenimiento de jardines',
-        'jardineria tampico',
-        'poda de arboles tampico',
-        'poda de arboles madero',
-        'poda de arboles altamira',
-        'mantenimiento áreas verdes',
+        'venta de pasto tampico',
+        'instalacion de pasto tampico',
+        'pasto japonés tampico',
+        'pasto san agustín tampico',
+        'venta de pasto madero',
+        'venta de pasto altamira',
         'jardinería El Retoño',
         'jardinero en Tampico',
         'jardinero en Ciudad Madero',
         'jardinero en Altamira',
-        'tala de arboles tampico',
-        'retiro de basura tampico',
+        'pasto natural tampico',
+        'césped tampico',
     ],
     authors: [{ name: 'Jardinería El Retoño', url: 'https://www.elretono.org' }],
     creator: 'Jardinería El Retoño',
     publisher: 'Jardinería El Retoño',
     openGraph: {
-        title: 'Poda de árboles | Jardinería El Retoño',
-        description: 'Expertos en poda de árboles. Servicio confiable y facturable. Atención personalizada y resultados impecables.',
-        url: 'https://www.elretono.org/servicios/poda-arboles-tampico-madero-altamira',
+        title: 'Venta e Instalación de Pasto | Jardinería El Retoño',
+        description: 'Venta e instalación de pasto japonés y San Agustín. Servicio confiable y facturable en Tampico, Madero y Altamira.',
+        url: 'https://www.elretono.org/servicios/venta-pasto-tampico-madero-altamira',
         siteName: 'Jardinería El Retoño',
         images: [
             {
@@ -75,48 +75,51 @@ const imagesGeneral = [
 function Page() {
     return (
         <>
-            <Head>
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "LocalBusiness",
-                        "name": "Jardinería El Retoño",
-                        "image": "https://elretono.org/logo.png",
-                        "logo": "https://elretono.org/logo.png",
-                        "email":"contacto@elretono.org",
-                        "url": "https://www.elretono.org",
-                        "telephone": "+52 833 537 4089",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressLocality": "Tampico",
-                            "addressRegion": "Tamaulipas",
-                            "addressCountry": "MX"
-                        },
-                        "sameAs":[
-                            "https://www.facebook.com/profile.php?id=100071794055837",
-                            "https://www.instagram.com/elretono.tampico/",
-                            "https://wa.link/l9ejrd",
+            <Breadcrumbs items={[
+                { label: 'Inicio', href: '/' },
+                { label: 'Servicios', href: '/servicios' },
+                { label: 'Venta de pasto' },
+            ]} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Jardinería El Retoño",
+                    "image": "https://elretono.org/logo.png",
+                    "logo": "https://elretono.org/logo.png",
+                    "email":"contacto@elretono.org",
+                    "url": "https://www.elretono.org",
+                    "telephone": "+52 833 537 4089",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Tampico",
+                        "addressRegion": "Tamaulipas",
+                        "addressCountry": "MX"
+                    },
+                    "sameAs":[
+                        "https://www.facebook.com/profile.php?id=100071794055837",
+                        "https://www.instagram.com/elretono.tampico/",
+                        "https://wa.link/l9ejrd",
+                    ],
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://www.elretono.org/servicios/venta-pasto-tampico-madero-altamira"
+                    },
+                    "priceRange": "$$",
+                    "description": "Venta e instalación de pasto japonés y San Agustín en Tampico, Madero y Altamira. Pasto de la mejor calidad con instalación profesional.",
+                    "areaServed": [
+                        { "@type": "Place", "name": "Tampico" },
+                        { "@type": "Place", "name": "Ciudad Madero" },
+                        { "@type": "Place", "name": "Altamira" }
+                    ],
+                    "openingHoursSpecification": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": [
+                            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
                         ],
-                        "mainEntityOfPage": {
-                            "@type": "WebPage",
-                            "@id": "https://www.elretono.org/servicios/poda-arboles-tampico-madero-altamira"
-                        },
-                        "priceRange": "$$",
-                        "description": "Poda de árboles y retiro de basura en Tampico, Madero y Altamira. Jardineros de confianza, servicios facturables y atención profesional.",
-                        "areaServed": [
-                            { "@type": "Place", "name": "Tampico" },
-                            { "@type": "Place", "name": "Ciudad Madero" },
-                            { "@type": "Place", "name": "Altamira" }
-                        ],
-                        "openingHoursSpecification": {
-                            "@type": "OpeningHoursSpecification",
-                            "dayOfWeek": [
-                                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-                            ],
-                            "opens": "08:00",
-                            "closes": "18:00"
-                        }
-                    }) }} />
-            </Head>
+                        "opens": "08:00",
+                        "closes": "18:00"
+                    }
+                }) }} />
             <div className="w-full h-fit flex flex-col items-center justify-center">
                 {/*hero*/}
                 <div

@@ -35,7 +35,7 @@ export default function RootLayout({
     ]
 
     return (
-        <html lang="en">
+        <html lang="es-MX">
         <head>
             {/* Google Tag Manager */}
             <Script
@@ -80,6 +80,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </head>
         <body className={montserrat.variable + " overflow-x-hidden"}>
 
+        <a href="#main-content" className="skip-link">Saltar al contenido principal</a>
+
         {/* Google Tag Manager (noscript) */}
         <noscript>
             <iframe
@@ -91,6 +93,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
 
         <nav
+            aria-label="Navegación principal"
             className="bg-[#eff0d6] w-full h-24 items-center justify-around sticky top-0 z-40 shadow-md hidden lg:flex">
             <Link href="/">
                 <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
@@ -109,12 +112,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </ul>
             <div className="flex items-center space-x-8 transition-colors duration-200">
                 <ContactButtonNavbar/>
-                <span
-                    className="p-4 bg-[#689a05] active:bg-[#3F5D03] hover:bg-[#3F5D03] transition-all duration-300 rounded-md text-white cursor-pointer hover:shadow-lg">
-                    <a href="https://wa.link/l9ejrd" target="_blank" rel="noreferrer">
+                <a href="https://wa.link/l9ejrd" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp"
+                    className="p-4 bg-[#689a05] active:bg-[#3F5D03] hover:bg-[#3F5D03] transition-all duration-300 rounded-md text-white cursor-pointer hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#689a05] focus:ring-offset-2 inline-flex">
                         <FaWhatsapp size={28}/>
-                    </a>
-                </span>
+                </a>
             </div>
         </nav>
 
@@ -124,26 +125,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 Servicios de jardineria residencial y empresarial a todo <span className="font-semibold">Tampico</span>, <span className="font-semibold">Madero</span> y <span className="font-semibold">Altamira</span>.
             </p>
         </div>
-        <nav className="bg-[#eff0d6] w-full h-24 flex items-center justify-between px-8 sticky top-0 z-40 shadow-md lg:hidden overflow-hidden">
+        <nav aria-label="Navegación móvil" className="bg-[#eff0d6] w-full h-24 flex items-center justify-between px-8 sticky top-0 z-40 shadow-md lg:hidden overflow-hidden">
             <Link href="/">
                 <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
                        className="h-[56px] w-auto cursor-pointer"/>
             </Link>
             <div className="flex items-center space-x-4 text-white">
-                <Link href="https://wa.link/l9ejrd">
+                <Link href="https://wa.link/l9ejrd" aria-label="Contactar por WhatsApp" target="_blank" rel="noreferrer">
                     <FaWhatsapp size={44} className="bg-[#689a05] p-2 rounded-md cursor-pointer hover:shadow-md"/>
                 </Link>
                 <MenuButtonNavbar/>
             </div>
         </nav>
         <div id="portal-root"/>
+        <main id="main-content">
         {children}
+        </main>
         {/*footer medium breakpoint*/}
-        <footer className="bg-[url('/footer.webp')] w-full h-[60vh] hidden lg:flex items-center justify-center bg-cover bg-center cursor-default relative z-0">
+        <footer aria-label="Pie de página" className="bg-[url('/footer.webp')] w-full h-[60vh] hidden lg:flex items-center justify-center bg-cover bg-center cursor-default relative z-0">
             {/*div para opacidad*/}
             <div className="inset-0 size-full bg-black opacity-55 absolute z-10"/>
             {/*contenedor principal*/}
-            <div className="w-[85%] flex md:flex-row flex-col items-center md:space-x-18 justify-center text-white">
+            <div className="w-[85%] flex md:flex-row flex-col items-center md:space-x-18 justify-center text-white relative z-20">
                 {/*logo y horario*/}
                 <div className="flex flex-col text-center justify-center items-center h-full space-y-8 z-20 w-[20%]">
                     <Image src="/logo.png" width={250} height={250} alt="EL RETOÑO LOGO"
@@ -178,13 +181,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div className="flex flex-col space-y-4">
                         <p>Síguenos</p>
                         <div className="flex items-center justify-start space-x-4">
-                            <Link href="https://wa.link/l9ejrd">
+                            <Link href="https://wa.link/l9ejrd" aria-label="WhatsApp de El Retoño" target="_blank" rel="noreferrer">
                                 <FaWhatsapp className="bg-green-400 p-1 size-10 rounded-full"/>
                             </Link>
-                            <Link href="https://www.facebook.com/profile.php?id=100071794055837">
+                            <Link href="https://www.facebook.com/profile.php?id=100071794055837" aria-label="Facebook de El Retoño" target="_blank" rel="noreferrer">
                                 <FaFacebook className="bg-blue-400 p-1 size-10 rounded-full"/>
                             </Link>
-                            <Link href="https://www.instagram.com/elretono.tampico/">
+                            <Link href="https://www.instagram.com/elretono.tampico/" aria-label="Instagram de El Retoño" target="_blank" rel="noreferrer">
                                 <FaInstagram className="bg-pink-400 p-1 size-10 rounded-full"/>
                             </Link>
                         </div>
@@ -202,7 +205,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             {/*div para opacidad*/}
             <div className="inset-0 size-full bg-black opacity-55 absolute z-10"/>
             {/*contenedor principal*/}
-            <div className="w-full flex flex-col items-center space-y-6 justify-center text-white">
+            <div className="w-full flex flex-col items-center space-y-6 justify-center text-white relative z-20">
                 {/*logo y horario*/}
                 <div className="flex flex-col text-center justify-center items-center h-full space-y-8 z-20 w-full">
                     <Link href="/">
@@ -241,13 +244,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div className="flex flex-col items-center space-y-4">
                         <p className="text-3xl">Síguenos</p>
                         <div className="flex items-center justify-start space-x-4">
-                            <Link href="https://wa.link/l9ejrd">
+                            <Link href="https://wa.link/l9ejrd" aria-label="WhatsApp de El Retoño" target="_blank" rel="noreferrer">
                                 <FaWhatsapp className="bg-green-400 p-1 size-10 rounded-full"/>
                             </Link>
-                            <Link href="https://www.facebook.com/profile.php?id=100071794055837">
+                            <Link href="https://www.facebook.com/profile.php?id=100071794055837" aria-label="Facebook de El Retoño" target="_blank" rel="noreferrer">
                                 <FaFacebook className="bg-blue-400 p-1 size-10 rounded-full"/>
                             </Link>
-                            <Link href="https://www.instagram.com/elretono.tampico/">
+                            <Link href="https://www.instagram.com/elretono.tampico/" aria-label="Instagram de El Retoño" target="_blank" rel="noreferrer">
                                 <FaInstagram className="bg-pink-400 p-1 size-10 rounded-full"/>
                             </Link>
                         </div>
