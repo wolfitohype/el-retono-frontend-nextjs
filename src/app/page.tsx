@@ -1,69 +1,74 @@
 import React from 'react';
 import Image from "next/image";
+import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
-import LinkButton from "@/components/LinkButton";
-import ImageCard from "@/components/ImageCard";
-import ReviewCard from "@/components/ReviewCard";
-import ItemCarousel from "@/components/ItemCarousel";
-import FeaturesCard from "@/components/FeaturesCard";
-import Slideshow from "@/components/Slideshow";
-import ShieldIcon from "@/assets/ShieldIcon"
-import ToolsIcon from "@/assets/ToolsIcon";
-import ExcellenceIcon from "@/assets/ExcellenceIcon";
-import {FaCheckCircle} from "react-icons/fa";
-import { FaRegCircleCheck, FaStar } from "react-icons/fa6";
-import BadgeIcon from "@/assets/BadgeIcon";
-import BulbIcon from "@/assets/BulbIcon";
-import TopEstandarIcon from "@/assets/TopEstandarIcon";
-import PopularIcon from "@/assets/PopularIcon";
-import WellnessIcon from "@/assets/WellnessIcon";
 import CountUpDividerClient from "@/components/CountUpDividerClient";
+import ItemCarousel from "@/components/ItemCarousel";
+import ReviewCard from "@/components/ReviewCard";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
 
+const servicios = [
+    {
+        name: 'Mantenimiento Residencial',
+        image: '/servicios-media/mant-residencial.webp',
+        link: '/servicios/jardineria-residencial-tampico-madero-altamira',
+        tagline: 'Tu jardín siempre impecable',
+    },
+    {
+        name: 'Poda de Árboles',
+        image: '/servicios-media/poda-arboles.webp',
+        link: '/servicios/poda-arboles-tampico-madero-altamira',
+        tagline: 'Control profesional y seguro',
+    },
+    {
+        name: 'Venta e Instalación de Pasto',
+        image: '/servicios-media/pasto.webp',
+        link: '/servicios/venta-pasto-tampico-madero-altamira',
+        tagline: 'De tierra a jardín verde',
+    },
+    {
+        name: 'Fertilización de Áreas Verdes',
+        image: '/servicios-media/fertilizacion.webp',
+        link: '/servicios/fertilizacion-tampico-madero-altamira',
+        tagline: 'Plantas sanas y vibrantes',
+    },
+    {
+        name: 'Fumigación',
+        image: '/servicios-media/fumigacion.webp',
+        link: '/servicios/fumigacion-tampico-madero-altamira',
+        tagline: 'Sin plagas, sin preocupaciones',
+    },
+    {
+        name: 'Póliza Comercial',
+        image: '/servicios-media/poliza.webp',
+        link: '/servicios/mantenimiento-areas-verdes-tampico-madero-altamira',
+        tagline: 'Tu empresa siempre presentable',
+    },
+    {
+        name: 'Retiro de Basura',
+        image: '/servicios-media/retiro-basura.webp',
+        link: '/servicios/retiro-basura-tampico-madero-altamira',
+        tagline: 'Limpieza total garantizada',
+    },
+    {
+        name: 'Diseño 3D de Jardines',
+        image: '/servicios-media/3d.webp',
+        link: '/servicios/diseno-3d-jardin-tampico-madero-altamira',
+        tagline: 'Tu jardín ideal antes de construirlo',
+    },
+];
 
-const serviciosList = [
-    'Mantenimiento de áreas verdes residenciales e industriales',
-    'Poda y derrame de árboles',
-    'Diseño 3D de jardines',
-    'Limpieza de terrenos enmontados',
-    'Fertilización de áreas verdes',
-    'Fumigación para prevención de plagas',
-    'Tratamiento de plantas con enfermedad'
-]
-
-const serviciosGenerales = [
-    'Limpieza de terrenos',
-    'Mantenimiento de jardines residenciales',
-    'Poda y derrame de árboles',
-    'Instalación de pasto Japonés y San Agustín',
-    'Cotizaciones y visita a domicilio sin costo',
-]
-
-const garantiasList = [
-    'Personal responsable, capacitado y de confianza',
-        'Nos ajustamos a su presupuesto',
-        'Trabajos impecables y de alta calidad',
-        'Productos de alta calidad garantizando los mejores resultados para su jardín',
-        'Citas flexibles que se ajustan a su disponibilidad',
-        'Ofrecemos factura a todos los servicios en caso de requerirlo',
-]
-
-const serviciosEspecializados = [
-    'Diseño 3D y construcción de jardín',
-        'Fertilización con abonos naturales',
-        'Fumigación para prevenir plagas',
-        'Tratamiento para enfermedades de plantas',
-        'Mantenimiento de áreas verdes comerciales e industriales',
-        'Mantenimiento de plazas comerciales y cadenas comerciales',
-        'Diseño 3D y construcción de proyectos de paisajismo',
-]
-
-const slidesUrl = [
-    '/slide1.webp',
-    '/slide2.webp',
-    '/slide3.webp',
-    '/slide4.webp',
-    '/slide5.webp',
-]
+const clientes = [
+    { src: '/clientes/potosi.webp', alt: 'Seguros El Potosí' },
+    { src: '/clientes/oxxo.png', alt: 'OXXO' },
+    { src: '/clientes/azulejos.webp', alt: 'Gigante de Azulejos' },
+    { src: '/clientes/bancario.webp', alt: 'Fracc Bancario' },
+    { src: '/clientes/floresta.webp', alt: 'Fracc Floresta' },
+    { src: '/clientes/kenworth.webp', alt: 'Kenworth de la Huasteca' },
+    { src: '/clientes/tampiquenos.webp', alt: 'Tampiquenos' },
+    { src: '/clientes/esperanza.webp', alt: 'Grupo Esperanza' },
+];
 
 export const metadata = {
     title: "El Retoño Jardinería | Expertos en Jardinería en Tampico, Madero y Altamira",
@@ -124,257 +129,235 @@ export const metadata = {
 function Page() {
     return (
         <>
-            {/*thin bar header*/}
-            <div className="bg-[#7c924f] h-8 w-dvw items-center justify-center z-10 hidden md:flex cursor-default">
-                <p className="text-white text-sm text-shadow-lg">
-                    Servicios de jardineria residencial y empresarial a todo <span
-                    className="font-semibold">Tampico</span>, <span className="font-semibold">Madero</span> y <span
-                    className="font-semibold">Altamira</span>.
-                </p>
-            </div>
-            {/*hero section*/}
-            <div className="h-130 md:h-[70vh] w-auto flex items-center justify-center relative z-20 cursor-default">
-                <Image src="/hero.webp" fill priority
-                       alt="Jardín profesional con palma diseñado por El Retoño en Tampico"
-                       className="absolute object-cover object-[center_90%] brightness-50"/>
-                <div className="text-white absolute inset-0 items-center flex flex-col justify-center space-y-6">
-                    <h1 className="font-semibold text-4xl md:text-6xl text-center">SERVICIOS DE JARDINERIA
-                        PROFESIONAL</h1>
-                    <p className="bg-[#F2F3E7] text-[#4f5d32] rounded-sm p-2 font-medium text-center w-[80dvw] md:w-auto">Convierte
-                        tus áreas verdes en un paraíso con su belleza natural</p>
-                    <ContactButton text="COTIZA YA" className="bg-[#7c924f] text-white px-6"/>
-                </div>
-            </div>
-            {/*divider*/}
-            <div
-                className="h-16 md:h-20 text-white bg-[#7c924f] flex items-center justify-center font-semibold text-4xl md:text-5xl shadow text-shadow-lg cursor-default">
-                <p>SERVICIOS</p>
-            </div>
-            {/*servicios section medium breakpoint*/}
-            <div className="md:h-[90dvh] lg:h-[80dvh] flex flex-col items-center justify-center relative z-0 overflow-hidden md:flex hidden  cursor-default">
-                {/*imagen de fondo*/}
-                <Image src="/serviciosbg.webp" fill alt="ARREGLO DE JARDIN INDUSTRIAL TAMPICO"
-                       className="object-cover object-center brightness-50"/>
-                {/*corte diagonal*/}
-                <div className="absolute inset-0 z-10"
-                    style={{
-                        clipPath: 'polygon(0 0, 50% 0, 35% 100%, 0% 100%)',
-                        backgroundColor: 'white'
-                    }}
+            {/* ── HERO ────────────────────────────────────────────── */}
+            <section className="relative min-h-screen flex items-center overflow-hidden">
+                <Image
+                    src="/hero.webp"
+                    fill
+                    priority
+                    alt="Jardín profesional diseñado por El Retoño en Tampico"
+                    className="object-cover object-[center_80%]"
                 />
-                {/*contenedor de contenido*/}
-                <div className="w-full flex items-center justify-between absolute inset-0 text-white z-20 pt-6 pb-12 px-4">
-                    {/*lado izquierdo*/}
-                    <div
-                        className="flex flex-col items-center justify-center space-y-5 w-[30dvw] text-black text-center">
-                        <ShieldIcon className="size-80 text-[#7c924f] -mb-3"/>
-                        <h3 className="text-3xl font-semibold">Más de 15 años de experiencia.</h3>
-                        <p>
-                            Haciendo realidad los jardines soñados por nuestros clientes, con nuestra experiencia en
-                            jardinería desde hace más de 15 años.
+                {/* Gradient overlay: fuerte a la izquierda, más suave a la derecha */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 py-32 flex flex-col items-start">
+
+                    {/* Pill de ubicación */}
+                    <div className="flex items-center gap-2.5 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-10">
+                        <span className="w-2 h-2 rounded-full bg-[#8ab82a] flex-shrink-0" />
+                        <span className="text-white/80 text-xs tracking-[0.2em] uppercase font-medium">
+                            Tampico · Madero · Altamira
+                        </span>
+                    </div>
+
+                    {/* H1 editorial */}
+                    <h1 className="leading-none mb-8">
+                        <span className="block text-white font-black text-5xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight">
+                            JARDINERÍA
+                        </span>
+                        <span className="block text-[#8ab82a] font-black text-5xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight">
+                            PROFESIONAL
+                        </span>
+                        <span className="block text-white/70 font-light text-2xl sm:text-3xl lg:text-4xl mt-3 tracking-normal">
+                            para tu hogar y empresa.
+                        </span>
+                    </h1>
+
+                    {/* Subtítulo */}
+                    <p className="text-white/60 text-base sm:text-lg max-w-xl mb-10 leading-relaxed">
+                        Más de 15 años transformando áreas verdes con calidad, confianza y resultados reales. Cotización sin costo, mismo día.
+                    </p>
+
+                    {/* CTAs */}
+                    <div className="flex flex-col sm:flex-row gap-4 mb-14">
+                        <a
+                            href="https://wa.link/l9ejrd"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fb557] text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-green-900/40 hover:-translate-y-0.5 text-base sm:text-lg"
+                        >
+                            <FaWhatsapp className="size-5" />
+                            Cotiza por WhatsApp
+                        </a>
+                        <ContactButton
+                            text="Solicitar información"
+                            className="!bg-white/10 !text-white border border-white/30 hover:!border-white/60 !rounded-xl !px-8 !py-4 text-base sm:text-lg !font-semibold !shadow-none hover:!bg-white/20 hover:!text-white"
+                        />
+                    </div>
+
+                    {/* Trust indicators inline */}
+                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/50 text-sm">
+                        {[
+                            '15+ años de experiencia',
+                            '500+ clientes satisfechos',
+                            'Facturación electrónica',
+                            'Registro REPSE',
+                        ].map((item) => (
+                            <span key={item} className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#689a05] flex-shrink-0" />
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Scroll line decorativo */}
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-30">
+                    <div className="w-px h-14 bg-gradient-to-b from-transparent to-white" />
+                </div>
+            </section>
+
+            {/* ── CLIENTES ────────────────────────────────────────── */}
+            <section className="bg-white py-14 px-6 border-b border-gray-100">
+                <div className="max-w-7xl mx-auto">
+                    <p className="text-center text-xs tracking-[0.3em] uppercase text-gray-400 font-medium mb-10">
+                        Empresas que confían en nosotros
+                    </p>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-x-8 gap-y-8 items-center justify-items-center">
+                        {clientes.map((cliente) => (
+                            <div
+                                key={cliente.alt}
+                                className="relative w-28 h-20 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-default"
+                            >
+                                <Image
+                                    src={cliente.src}
+                                    alt={cliente.alt}
+                                    fill
+                                    className="object-contain"
+                                    sizes="112px"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── THIN SEPARATOR ──────────────────────────────────── */}
+            <div className="w-full h-[4px] bg-[#689a05]" />
+
+            {/* ── SERVICIOS ───────────────────────────────────────── */}
+            <section className="bg-[#f5f7ee] py-24 px-6">
+                <div className="max-w-7xl mx-auto">
+                    {/* Header */}
+                    <div className="flex flex-col items-center text-center mb-16">
+                        <p className="text-xs tracking-[0.3em] uppercase text-[#689a05] font-semibold mb-3">
+                            Lo que hacemos
+                        </p>
+                        <h2 className="text-4xl lg:text-5xl font-black text-[#2d3a1a] leading-tight">
+                            Nuestros Servicios
+                        </h2>
+                        <div className="w-16 h-1 bg-[#689a05] rounded-full mt-5" />
+                    </div>
+
+                    {/* Grid de servicios */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {servicios.map((s) => (
+                            <Link
+                                key={s.link}
+                                href={s.link}
+                                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+                            >
+                                <div className="relative h-48 overflow-hidden flex-shrink-0">
+                                    <Image
+                                        src={s.image}
+                                        alt={s.name}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                </div>
+                                <div className="p-5 flex flex-col flex-1">
+                                    <div className="w-8 h-0.5 bg-[#689a05] mb-3" />
+                                    <h3 className="font-bold text-[#2d3a1a] text-sm leading-snug mb-1 flex-1">
+                                        {s.name}
+                                    </h3>
+                                    <p className="text-xs text-gray-400 italic mb-4">{s.tagline}</p>
+                                    <span className="flex items-center gap-1.5 text-[#689a05] text-xs font-bold group-hover:gap-3 transition-all duration-300">
+                                        Ver servicio <FaArrowRight className="size-3" />
+                                    </span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Ver todos CTA */}
+                    <div className="flex justify-center mt-12">
+                        <Link
+                            href="/servicios"
+                            className="flex items-center gap-2 bg-[#4f5d32] hover:bg-[#2d3a1a] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg"
+                        >
+                            Ver todos los servicios
+                            <FaArrowRight className="size-4" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── ESTADÍSTICAS ────────────────────────────────────── */}
+            <CountUpDividerClient />
+
+            {/* ── REVIEWS ─────────────────────────────────────────── */}
+            <section className="bg-[#1a2410] py-20 px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex flex-col items-center text-center mb-12">
+                        <p className="text-xs tracking-[0.3em] uppercase text-[#8ab82a] font-semibold mb-3">
+                            Testimonios
+                        </p>
+                        <h2 className="text-4xl font-black text-white">
+                            Lo que dicen nuestros clientes
+                        </h2>
+                        <div className="w-16 h-1 bg-[#689a05] rounded-full mt-4" />
+                    </div>
+                    <ItemCarousel>
+                        <ReviewCard rating={5} title="Excelente servicio" comments="Excelente servicio, calidad y trato" name="Amaite Solis" profileUrl="/reviews/AS.jpg" />
+                        <ReviewCard rating={5} title="Excelente servicio" comments="Excelente servicio, 100% recomendado" name="Marco Trejo" profileUrl="/reviews/MT.jpg" />
+                        <ReviewCard rating={5} title="Muy buen servicio" comments="Muy puntuales y excelente trabajo" name="David Humberto" profileUrl="/reviews/DM.jpg" />
+                        <ReviewCard rating={5} title="100% recomendados, muy bonitos trabajos los que hacen" comments="" name="Ivonne Chavez" profileUrl="/reviews/IC.jpg" />
+                    </ItemCarousel>
+                </div>
+            </section>
+
+            {/* ── FINAL CTA ───────────────────────────────────────── */}
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* WhatsApp */}
+                <a
+                    href="https://wa.link/l9ejrd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-[#25D366] hover:bg-[#1fb557] transition-colors duration-300 flex flex-col items-center justify-center gap-5 py-20 px-8 text-center"
+                >
+                    <FaWhatsapp className="size-16 text-white group-hover:scale-110 transition-transform duration-300" />
+                    <div>
+                        <p className="text-white font-black text-2xl lg:text-3xl leading-snug">
+                            Escríbenos por WhatsApp
+                        </p>
+                        <p className="text-white/70 text-sm mt-1">
+                            Respuesta en minutos · Cotización gratis
                         </p>
                     </div>
-                    {/*lado derecho*/}
-                    <div className="flex flex-col items-center justify-center space-y-6 w-[45dvw] text-white">
-                        <ul className="flex flex-col justify-center space-y-5">
-                            {serviciosList.map((servicio, index) => (
-                                <li key={index} className="flex items-center space-x-6 text-[20px] text-wrap">
-                                    <FaCheckCircle className="size-8 flex-shrink-0"/>
-                                    <p className="flex-grow break-words">{servicio}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-                {/*boton navegador*/}
-                <LinkButton text="CONOCE NUESTROS SERVICIOS" link="#servicios"
-                className="z-20 absolute bottom-2 bg-white font-semibold text-[#4f5d32] shadow-lg hover:shadow-2xl mb-5"/>
-            </div>
+                    <span className="flex items-center gap-2 bg-white/20 group-hover:bg-white/30 text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
+                        Abrir WhatsApp <FaArrowRight className="size-3.5" />
+                    </span>
+                </a>
 
-            {/*servicios section mobile*/}
-            <div className="h-250 flex flex-col items-center justify-around relative z-0 md:hidden  cursor-default">
-                {/* Sección superior */}
-                <div
-                    className="flex flex-col items-center justify-center space-y-5 w-[80dvw] text-black text-center pt-10 pb-5"> {/* Ajusta pt y pb según necesites */}
-                    <ShieldIcon className="size-80 text-[#7c924f] -mb-3 -mt-25"/>
-                    <h3 className="text-2xl font-semibold">Más de 15 años de experiencia.</h3>
-                </div>
-
-                {/* Sección inferior con imagen de fondo*/}
-                <div
-                    className="w-full h-[100%] bg-[url('/serviciosbg.webp')] bg-cover bg-center flex flex-col space-y-12 justify-center items-center relative z-0"> {/* Contenedor para la imagen y el contenido */}
-                    {/*div para opacidad*/}
-                    <div className="inset-0 size-full bg-black opacity-50 absolute"/>
-                    {/*lista de servicios*/}
-                    <ul className="flex flex-col justify-center space-y-6 sm:space-y-8 z-10 text-white w-[80dvw]">
-                        {serviciosList.map((servicio, index) => (
-                            <li key={index} className="flex items-center space-x-6 text-[18px] sm:text-[20px] font-semibold text-wrap">
-                                <FaCheckCircle className="size-8 flex-shrink-0"/>
-                                <p className="flex-grow break-words">{servicio}</p>
-                            </li>
-                        ))}
-                    </ul>
-                    <LinkButton
-                        className="bg-white font-semibold text-[#4f5d32] text-center w-[80dvw] shadow-md z-20"
-                        text="CONOCE NUESTROS SERVICIOS"
-                        link="#servicios" />
-                </div>
-            </div>
-            <CountUpDividerClient/>
-            {/*por que elegirnos section*/}
-            <div className="h-fit md:flex w-full bg-[#f2f3e7]">
-                {/*div imagen fondo*/}
-                <div className="bg-[url('/serviciosbg.webp')] w-1/2 absolute bg-cover bg-center relative z-0 hidden lg:flex">
-                    {/*div para opacidad*/}
-                    <div className="inset-0 size-full bg-black opacity-15 absolute"/>
-                </div>
-                <div className="w-full lg:w-1/2 h-full py-10 xl:p-6 flex flex-col items-center xl:items-start justify-center md:p-12 space-y-8 md:space-y-12 cursor-default">
-                    <p className="text-4xl font-semibold">Por qué elegirnos?</p>
-                    <ImageCard image={ToolsIcon} text="Contamos con las herramientas necesarias para todo tipo de proyectos."/>
-                    <ImageCard iconClassName="md:size-20" image={BadgeIcon} text="Hemos ganado la confianza de nuestros clientes, y somos recomendados por nuestra excelencia y compromiso."/>
-                    <ImageCard image={BulbIcon} text="Damos lo mejor en cada proyecto, brindando gran creatividad para la creación de áreas verdes."/>
-                </div>
-            </div>
-            {/*frase divider*/}
-            <div className="h-fit py-4 bg-[#7c924f] flex items-center justify-center text-center w-full z-20 shadow-lg text-white cursor-default">
-                <p className="text-xl">Creamos el espacio de <span className="font-semibold">paz y tranquilidad que tanto mereces.</span></p>
-            </div>
-            {/*nuestro proposito section*/}
-            <div className="h-fit flex w-full bg-[#f2f3e7]">
-                <div className="lg:w-1/2 w-full h-full py-10 xl:p-6 flex flex-col items-center xl:items-start justify-center md:p-12 space-y-8 md:space-y-12 cursor-default">
-                    <p className="text-4xl font-semibold">Nuestro propósito</p>
-                    <ImageCard
-                        image={PopularIcon}
-                        text="Ser los principales provedores de mantenimiento a las áreas verdes en la zona conurbada, ofreciendo servicios rápidos, de calidad, y con precios justos."/>
-                    <ImageCard
-                        iconClassName="size-20"
-                        image={TopEstandarIcon}
-                        text="Ser el estándar de calidad de la zona, manteniendo nuestro servicio de primera, y nuestra excelente atención al cliente."/>
-                    <ImageCard
-                        iconClassName="size-20"
-                        image={WellnessIcon}
-                        text="Promover el cuidado de áreas verdes, pues creemos que un jardín bien cuidado, brinda paz, alegría y bienestar con tan solo mirarlo."/>
-                </div>
-                <div className="bg-[url('/industrialbg.webp')] w-1/2 absolute bg-cover bg-center relative z-0 hidden lg:flex">
-                    {/*div para opacidad*/}
-                    <div className="inset-0 size-full bg-black opacity-35 absolute"/>
-                </div>
-            </div>
-            {/*/!*CTA divider*!/*/}
-            <div className="h-fit py-4 bg-[#4f5d32] flex items-center justify-center text-center w-full text-white flex-col space-y-3 cursor-default">
-                <p className="text-3xl font-semibold text-shadow-lg">¡Renueva tu jardín con nosotros!</p>
-                <ContactButton text={"SÍ QUIERO"} className="bg-white rounded-lg text-[#4f5d32] font-semibold"/>
-            </div>
-            {/*reviews section medium breakpoint*/}
-            <div className="h-[60vh] hidden md:flex w-full items-center justify-start cursor-default">
-                <div className="w-full h-full bg-[url('/industrialbg.webp')] bg-cover bg-center flex items-center justify-between pr-8 relative z-0">
-                    {/*div para opacidad*/}
-                    <div className="inset-0 h-full bg-black opacity-35 absolute"/>
-                    <div className="w-4/6">
-                        <ItemCarousel>
-                            <ReviewCard rating={5} title="Excelente servicio" comments="Excelente servicio, calidad y trato"
-                                        name="Amaite Solis" profileUrl={"/reviews/AS.jpg"}/>
-                            <ReviewCard rating={5} title="Excelente servicio" comments="Excelente servicio, 100% recomendado"
-                                        name="Marco Trejo" profileUrl={"/reviews/MT.jpg"}/>
-                            <ReviewCard rating={5} title="Muy buen servicio" comments="Muy puntuales y excelente trabajo"
-                                        name="David Humberto" profileUrl={"/reviews/DM.jpg"}/>
-                            <ReviewCard rating={5} title="100% recomendados, muy bonitos trabajos los que hacen" comments={""}
-                                        name="Ivonne Chavez" profileUrl={"/reviews/IC.jpg"}/>
-                        </ItemCarousel>
+                {/* Formulario */}
+                <div className="bg-[#2d3a1a] flex flex-col items-center justify-center gap-5 py-20 px-8 text-center">
+                    <p className="text-white/30 text-xs tracking-[0.25em] uppercase">O si prefieres</p>
+                    <div>
+                        <p className="text-white font-black text-2xl lg:text-3xl leading-snug">
+                            Déjanos tus datos
+                        </p>
+                        <p className="text-white/50 text-sm mt-1">
+                            Te contactamos a la brevedad
+                        </p>
                     </div>
-                    {/*corte diagonal*/}
-                    <div className="absolute inset-0 z-10"
-                         style={{
-                             clipPath: 'polygon(45% 0, 100% 0%, 100% 100%, 65% 100%)',
-                             backgroundColor: 'white'
-                         }}
+                    <ContactButton
+                        text="Enviar mensaje"
+                        className="!bg-[#689a05] hover:!bg-[#7aad06] !text-white !rounded-xl !px-10 !py-4 !font-bold !text-base !shadow-none hover:!text-white"
                     />
-                    <div className="z-20 flex flex-col items-center text-center space-y-12">
-                        <ExcellenceIcon className="size-32 text-[#7c924f]"/>
-                        <h2 className="text-2xl font-bold">Clientes que nos recomiendan</h2>
-                        <p className="hidden md:block">Clientes residenciales y comerciales, que realmente nos recomiendan.</p>
-                    </div>
                 </div>
-            </div>
-            {/*reviews section medium breakpoint*/}
-            <div className="h-[75vh] flex flex-col md:hidden w-full items-center justify-start">
-                <div className="h-h-1/2 z-20 flex flex-col items-center justify-center text-center space-y-6 py-6 max-w-[80%]">
-                    <ExcellenceIcon className="size-32 text-[#7c924f]"/>
-                    <h2 className="text-2xl font-bold">Clientes que nos recomiendan</h2>
-                    <p className="block">Clientes residenciales y comerciales, que realmente nos recomiendan.</p>
-                </div>
-                <div className="w-full h-1/2 bg-[url('/industrialbg.webp')] bg-cover bg-center flex items-center justify-between relative z-0">
-                    {/*div para opacidad*/}
-                    <div className="inset-0 size-full bg-black opacity-35 absolute"/>
-                    <div className="w-full">
-                        <ItemCarousel>
-                            <ReviewCard rating={5} title="Excelente servicio" comments="Excelente servicio, calidad y trato"
-                                        name="Amaite Solis" profileUrl={"/reviews/AS.jpg"}/>
-                            <ReviewCard rating={5} title="Excelente servicio" comments="Excelente servicio, 100% recomendado"
-                                        name="Marco Trejo" profileUrl={"/reviews/MT.jpg"}/>
-                            <ReviewCard rating={5} title="Muy buen servicio" comments="Muy puntuales y excelente trabajo"
-                                        name="David Humberto" profileUrl={"/reviews/DM.jpg"}/>
-                            <ReviewCard rating={5} title="100% recomendados, muy bonitos trabajos los que hacen" comments={""}
-                                        name="Ivonne Chavez" profileUrl={"/reviews/IC.jpg"}/>
-                        </ItemCarousel>
-                    </div>
-                </div>
-            </div>
-            {/*servicios section*/}
-            <div
-                id="servicios"
-                className="xl:h-[80dvh] h-fit scroll-mt-24 w-full flex flex-col items-center justify-center space-y-6 cursor-default p-12 bg-[#f2f3e7]">
-                <p className="font-semibold text-3xl text-white bg-[#4f5d32] py-2 px-12 text-center shadow-md">LO QUE OFRECEMOS</p>
-                <div className="w-full h-full flex lg:flex-row flex-col items-center justify-center lg:items-start lg:space-x-18 space-y-12">
-                    <FeaturesCard icon={FaRegCircleCheck} features={serviciosGenerales} title={"SERVICIOS GENERALES"} className="bg-[#FFFFFA]"/>
-                    <FeaturesCard icon={FaStar} features={garantiasList} title={"NUESTRA GARANTÍA"} className="bg-white"/>
-                    <FeaturesCard icon={FaRegCircleCheck} features={serviciosEspecializados} title={"SERVICIOS ESPECIALIZADOS"} className="bg-[#FFFFFA]"/>
-                </div>
-            </div>
-            {/*/!*CTA divider*!/*/}
-            <div className="h-fit py-4 bg-[#4f5d32] flex items-center justify-center text-center w-full text-white flex-col space-y-3  cursor-default">
-                <p className="text-3xl font-semibold text-shadow-lg">Recuerda que estamos para servirte</p>
-                <ContactButton text={"CONTÁCTANOS"} className="bg-white rounded-lg text-[#4f5d32] font-semibold"/>
-            </div>
-            {/*portafolio clientes section*/}
-            <div className="h-fit py-8 w-full flex flex-col items-center justify-center space-y-4  cursor-default">
-                <p className="font-semibold text-3xl text-white bg-[#4f5d32] py-2 px-8 md:px-12 text-center shadow-md">NUESTROS CLIENTES</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-5 lg:gap-y-12 p-6 place-items-center w-[80%]">
-                    <Image src="/clientes/potosi.webp"
-                           width={300} height={0} alt="SEGUROS EL POTOSI LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                    <Image src="/clientes/oxxo.png"
-                           width={250} height={0} alt="OXXO LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                    <Image src="/clientes/azulejos.webp"
-                           width={250} height={0} alt="GIGANTE DE AZULEJOS LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                    <Image src="/clientes/bancario.webp"
-                           width={250} height={0} alt="FRACC BANCARIO LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                    <Image src="/clientes/floresta.webp"
-                           width={250} height={0} alt="FRACC FLORESTA LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                    <Image src="/clientes/kenworth.webp"
-                           width={250} height={0} alt="KENWORTH DE LA HUASTECA LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                    <Image src="/clientes/tampiquenos.webp"
-                           width={250} height={0} alt="TAMPIQUENOS LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                    <Image src="/clientes/esperanza.webp"
-                           width={250} height={0} alt="GRUPO ESPERANZA LOGO"
-                           className="w-full rounded-xl sm:w-[65%] lg:size-auto rounded-xl"/>
-                </div>
-            </div>
-            {/*/!*CTA divider*!/*/}
-            <div className="h-fit py-4 bg-[#4f5d32] flex items-center justify-center text-center w-full text-white flex-col space-y-3 cursor-default">
-                <p className="text-3xl font-medium text-shadow-lg">No esperes más y agenda tu primer cita <span className="font-semibold">ahora</span></p>
-                <ContactButton text={"CONTÁCTANOS"} className="bg-white rounded-lg text-[#4f5d32] font-semibold"/>
-            </div>
-            <div className="h-[30vh] w-full">
-                <Slideshow slidesUrl={slidesUrl}>
-                    <p className="font-semibold text-xl max-w-3/4 text-center sm:text-2xl text-white  cursor-default">Un jardín bien cuidado es fuente de belleza, tranquilidad y relajación en casa.</p>
-                </Slideshow>
             </div>
         </>
     );

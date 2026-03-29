@@ -12,9 +12,9 @@ function ContactButtonNavbar() {
                 type="button"
                 onClick={() => setIsFormOpen(true)}
                 aria-label="Abrir formulario de contacto"
-                className="flex space-x-4 text-white items-center bg-[#689a05] active:bg-[#3F5D03] hover:bg-[#3F5D03] transition-all duration-300 cursor-pointer rounded-md p-4 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                className="flex items-center gap-2 text-white/70 hover:text-white border border-white/15 hover:border-white/40 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/30 w-full justify-center"
             >
-                <IoMdMail size={28}/>
+                <IoMdMail className="size-4"/>
                 <span>Contáctanos</span>
             </button>
             <ContactForm isOpen={isFormOpen} setIsFormOpen={setIsFormOpen} />
