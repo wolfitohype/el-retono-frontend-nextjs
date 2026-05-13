@@ -1,0 +1,27 @@
+# El Retoño Jardinería
+
+> Empresa de jardinería profesional en Tampico, Madero y Altamira (Tamaulipas, México) con más de 15 años de experiencia, registro REPSE y facturación electrónica.
+
+El Retoño Jardinería ofrece soluciones integrales de mantenimiento de áreas verdes para hogares, empresas, condominios e industrias en la zona conurbada de Tampico. Cotizamos sin costo, atendemos el mismo día y facturamos para empresas y particulares.
+
+## Páginas principales
+
+- [Inicio](https://elretono.org/): Presentación de El Retoño, servicios destacados, clientes que confían en nosotros, testimonios y datos de contacto.
+- [Servicios](https://elretono.org/servicios): Catálogo completo de servicios de jardinería con beneficios y descripción de cada uno.
+- [Contacto](https://elretono.org/contacto): Canales directos por WhatsApp, teléfono, correo y formulario. Zona de servicio y horarios.
+
+## Servicios
+
+- [Mantenimiento de jardines residenciales](https://elretono.org/servicios/jardineria-residencial-tampico-madero-altamira): Planes semanales, quincenales o mensuales para hogares.
+- [Poda de árboles](https://elretono.org/servicios/poda-arboles-tampico-madero-altamira): Poda profesional con retiro de basura incluido.
+- [Venta e instalación de pasto](https://elretono.org/servicios/venta-pasto-tampico-madero-altamira): Pasto japonés y San Agustín con nivelación e instalación.
+- [Fertilización profesional](https://elretono.org/servicios/fertilizacion-tampico-madero-altamira): Tratamientos personalizados según el tipo de suelo.
+- [Fumigación de jardines](https://elretono.org/servicios/fumigacion-tampico-madero-altamira): Control integral de plagas con productos seguros.
+- [Póliza comercial de áreas verdes](https://elretono.org/servicios/mantenimiento-areas-verdes-tampico-madero-altamira): Mantenimiento periódico para empresas con precio fijo mensual.
+- [Retiro de basura y limpieza](https://elretono.org/servicios/retiro-basura-tampico-madero-altamira): Retiro de escombro, ramas, poda y desechos.
+- [Diseño y previsualización 3D](https://elretono.org/servicios/diseno-3d-jardin-tampico-madero-altamira): Renders realistas de tu jardín antes de construirlo.
+
+## Recursos
+
+- [Contenido completo (llms-full.txt)](https://elretono.org/llms-full.txt)
+- [Sitemap XML](https://elretono.org/sitemap.xml)
