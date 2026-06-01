@@ -5,10 +5,9 @@ import ContactButton from "@/components/ContactButton";
 import CountUpDividerClient from "@/components/CountUpDividerClient";
 import ItemCarousel from "@/components/ItemCarousel";
 import ReviewCard from "@/components/ReviewCard";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
-
-const WA_URL = "https://api.whatsapp.com/send?phone=528335374089&text=Estoy%20interesado%20en%20sus%20servicios%20%F0%9F%8C%B1";
 
 const servicios = [
     {
@@ -215,16 +214,13 @@ function Page() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-14">
-                        <a
-                            href={WA_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Cotizar por WhatsApp con El Retoño Jardinería"
+                        <WhatsAppButton
+                            ariaLabel="Cotizar por WhatsApp con El Retoño Jardinería"
                             className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fb557] text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-green-900/40 hover:-translate-y-0.5 text-base sm:text-lg"
                         >
                             <FaWhatsapp className="size-5" />
                             Cotiza por WhatsApp
-                        </a>
+                        </WhatsAppButton>
                         <ContactButton
                             text="Solicitar información"
                             className="!bg-white/10 !text-white border border-white/30 hover:!border-white/60 !rounded-xl !px-8 !py-4 text-base sm:text-lg !font-semibold !shadow-none hover:!bg-white/20 hover:!text-white"
@@ -368,11 +364,8 @@ function Page() {
 
             {/* ── FINAL CTA ───────────────────────────────────────── */}
             <section aria-label="Contacto" className="grid grid-cols-1 lg:grid-cols-2">
-                <a
-                    href={WA_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Contactar a El Retoño Jardinería por WhatsApp"
+                <WhatsAppButton
+                    ariaLabel="Contactar a El Retoño Jardinería por WhatsApp"
                     className="group bg-[#25D366] hover:bg-[#1fb557] transition-colors duration-300 flex flex-col items-center justify-center gap-5 py-20 px-8 text-center"
                 >
                     <FaWhatsapp className="size-16 text-white group-hover:scale-110 transition-transform duration-300" />
@@ -387,7 +380,7 @@ function Page() {
                     <span className="flex items-center gap-2 bg-white/20 group-hover:bg-white/30 text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
                         Abrir WhatsApp <FaArrowRight className="size-3.5" />
                     </span>
-                </a>
+                </WhatsAppButton>
 
                 <div className="bg-[#2d3a1a] flex flex-col items-center justify-center gap-5 py-20 px-8 text-center">
                     <p className="text-white/30 text-xs tracking-[0.25em] uppercase">O si prefieres</p>

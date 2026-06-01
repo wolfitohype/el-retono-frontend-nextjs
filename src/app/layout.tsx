@@ -11,8 +11,9 @@ import "./globals.css";
 import Link from "next/link";
 import React from "react";
 import MenuButtonNavbar from "@/components/MenuButtonNavbar";
-
-const WA_URL = "https://api.whatsapp.com/send?phone=528335374089&text=Estoy%20interesado%20en%20sus%20servicios%20%F0%9F%8C%B1";
+import MetaPixel from "@/components/tracking/MetaPixel";
+import TrackingBootstrap from "@/components/tracking/TrackingBootstrap";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const montserrat = Montserrat({
     weight: ['400', '500', '600', '700', '800', '900'],
@@ -139,6 +140,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             />
         </noscript>
 
+        <MetaPixel />
+        <TrackingBootstrap />
+
         {/* ── NAVBAR ──────────────────────────────────────────────── */}
         <header className="sticky top-0 z-40 bg-[#0f1a08]/95 backdrop-blur-md border-b border-white/5">
             <nav
@@ -175,29 +179,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {/* CTAs desktop */}
                 <div className="hidden lg:flex items-center gap-3">
                     <ContactButtonNavbar />
-                    <a
-                        href={WA_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Contactar a El Retoño por WhatsApp"
+                    <WhatsAppButton
+                        ariaLabel="Contactar a El Retoño por WhatsApp"
                         className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb557] text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-900/30 text-sm"
                     >
                         <FaWhatsapp className="size-4" />
                         WhatsApp
-                    </a>
+                    </WhatsAppButton>
                 </div>
 
                 {/* Mobile: WA + hamburger */}
                 <div className="flex lg:hidden items-center gap-3">
-                    <a
-                        href={WA_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Contactar a El Retoño por WhatsApp"
+                    <WhatsAppButton
+                        ariaLabel="Contactar a El Retoño por WhatsApp"
                         className="flex items-center justify-center bg-[#25D366] hover:bg-[#1fb557] text-white p-2.5 rounded-xl transition-colors"
                     >
                         <FaWhatsapp className="size-5" />
-                    </a>
+                    </WhatsAppButton>
                     <MenuButtonNavbar />
                 </div>
             </nav>
@@ -221,9 +219,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         Transformando áreas verdes en paraísos naturales desde hace más de 15 años en la zona conurbada de Tampico.
                     </p>
                     <div className="flex items-center gap-3">
-                        <a href={WA_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de El Retoño Jardinería" className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-[#25D366] text-white/50 hover:text-white transition-all duration-300">
+                        <WhatsAppButton
+                            ariaLabel="WhatsApp de El Retoño Jardinería"
+                            className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-[#25D366] text-white/50 hover:text-white transition-all duration-300"
+                        >
                             <FaWhatsapp className="size-4" />
-                        </a>
+                        </WhatsAppButton>
                         <a href="https://www.facebook.com/profile.php?id=100071794055837" target="_blank" rel="noopener noreferrer" aria-label="Facebook de El Retoño Jardinería" className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-[#1877f2] text-white/50 hover:text-white transition-all duration-300">
                             <FaFacebook className="size-4" />
                         </a>

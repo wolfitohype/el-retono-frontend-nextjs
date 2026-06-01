@@ -6,8 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 import ContactButtonNavbar from "@/components/ContactButtonNavbar";
-
-const WA_URL = "https://api.whatsapp.com/send?phone=528335374089&text=Estoy%20interesado%20en%20sus%20servicios%20%F0%9F%8C%B1";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 interface SideNavbarProps {
     isOpen: boolean;
@@ -121,17 +120,14 @@ function MobileSideNavbar({ isOpen, setIsOpen }: SideNavbarProps) {
                     className="relative px-5 py-6 flex flex-col gap-3 border-t border-white/10"
                     style={{ zIndex: 10, backgroundColor: 'rgba(15, 22, 6, 0.5)' }}
                 >
-                    <a
-                        href={WA_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Contactar a El Retoño Jardinería por WhatsApp"
+                    <WhatsAppButton
+                        ariaLabel="Contactar a El Retoño Jardinería por WhatsApp"
                         onClick={() => setIsOpen(false)}
                         className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb557] text-white font-bold py-3.5 rounded-xl transition-colors w-full shadow-lg shadow-green-900/30"
                     >
                         <FaWhatsapp className="size-5" />
                         WhatsApp
-                    </a>
+                    </WhatsAppButton>
                     <ContactButtonNavbar />
                 </div>
             </div>

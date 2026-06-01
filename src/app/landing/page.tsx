@@ -6,6 +6,7 @@ import { BiEnvelope, BiCoinStack } from 'react-icons/bi';
 import LandingBServicesCarousel from '@/components/LandingBServicesCarousel';
 import LandingBClientsMarquee from '@/components/LandingBClientsMarquee';
 import HubSpotForm from '@/components/HubSpotForm';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: 'El Retoño Jardinería | Servicio Corporativo, Industrial y Comercial | Tampico',
@@ -293,9 +294,12 @@ export default function LandingBPage() {
                   </div>
                   <div>
                     <span className="text-white block mb-1">Whatsapp</span>
-                    <a href="https://wa.me/528335374089" className="text-white text-xl font-medium hover:text-yellow-300">
+                    <WhatsAppButton
+                      ariaLabel="WhatsApp 833 537 4089"
+                      className="text-white text-xl font-medium hover:text-yellow-300"
+                    >
                       833 537 4089
-                    </a>
+                    </WhatsAppButton>
                   </div>
                 </div>
 
