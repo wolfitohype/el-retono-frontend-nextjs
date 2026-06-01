@@ -6,8 +6,8 @@ export const WA_PHONE = '528335374089';
 // el content_name del evento Lead del pixel.
 function buildMessage(matchCode: string | null): string {
     return matchCode
-        ? `Hola, quiero información para el mantenimiento de mi jardín (folio ${matchCode}).`
-        : 'Hola, quiero información para el mantenimiento de mi jardín.';
+        ? `Estoy interesado en sus servicios 🌱 . Folio (${matchCode})`
+        : 'Estoy interesado en sus servicios 🌱';
 }
 
 export function buildWaUrl(matchCode: string | null): string {
