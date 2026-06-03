@@ -348,9 +348,12 @@ export default function LandingBPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://wa.link/l9ejrd" className="text-white hover:text-yellow-300 text-2xl">
+                  <WhatsAppButton
+                    ariaLabel="WhatsApp de El Retoño"
+                    className="text-white hover:text-yellow-300 text-2xl"
+                  >
                     <FaWhatsapp />
-                  </a>
+                  </WhatsAppButton>
                 </li>
               </ul>
             </div>

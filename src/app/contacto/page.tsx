@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaPhone, FaEnvelope, FaLocationDot, FaClock } from 'react-icons/fa6';
 import ContactCard from '@/components/ContactCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata = {
     title: "Contacto | El Retoño Jardinería | Tampico, Madero y Altamira",
@@ -105,10 +106,8 @@ export default function ContactPage() {
                     {/* Contact details */}
                     <ul className="space-y-5">
                         <li>
-                            <a
-                                href="https://wa.link/l9ejrd"
-                                target="_blank"
-                                rel="noreferrer"
+                            <WhatsAppButton
+                                ariaLabel="WhatsApp de El Retoño Jardinería"
                                 className="flex items-center space-x-4 group"
                             >
                                 <span className="bg-[#689a05] p-2.5 rounded-lg group-hover:bg-[#7dab07] transition-colors">
@@ -118,7 +117,7 @@ export default function ContactPage() {
                                     <p className="text-xs text-white/60 uppercase tracking-wider">WhatsApp</p>
                                     <p className="font-semibold group-hover:text-[#a8d44a] transition-colors">833 537 4089</p>
                                 </div>
-                            </a>
+                            </WhatsAppButton>
                         </li>
                         <li>
                             <a
@@ -174,15 +173,12 @@ export default function ContactPage() {
                     <div className="space-y-3">
                         <p className="text-xs text-white/60 uppercase tracking-wider">Síguenos</p>
                         <div className="flex items-center space-x-3">
-                            <a
-                                href="https://wa.link/l9ejrd"
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label="WhatsApp de El Retoño"
+                            <WhatsAppButton
+                                ariaLabel="WhatsApp de El Retoño"
                                 className="bg-white/10 hover:bg-[#689a05] p-2.5 rounded-lg transition-colors"
                             >
                                 <FaWhatsapp className="size-5" />
-                            </a>
+                            </WhatsAppButton>
                             <a
                                 href="https://www.facebook.com/profile.php?id=100071794055837"
                                 target="_blank"
@@ -209,10 +205,8 @@ export default function ContactPage() {
                 <div className="w-full lg:w-3/5 bg-[#f5f7ee] flex flex-col items-center justify-center px-6 py-14 space-y-6">
 
                     {/* WhatsApp card */}
-                    <a
-                        href="https://wa.link/l9ejrd"
-                        target="_blank"
-                        rel="noreferrer"
+                    <WhatsAppButton
+                        ariaLabel="Escríbenos por WhatsApp"
                         className="w-full max-w-[600px] bg-[#25D366] hover:bg-[#1ebe5a] active:bg-[#18a84e] transition-all duration-300 rounded-lg shadow-md hover:shadow-xl px-8 py-6 flex items-center justify-between text-white group"
                     >
                         <div className="space-y-1">
@@ -221,7 +215,7 @@ export default function ContactPage() {
                             <p className="text-sm opacity-80">Respondemos en minutos · Sin formularios</p>
                         </div>
                         <FaWhatsapp className="size-14 opacity-90 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                    </a>
+                    </WhatsAppButton>
 
                     {/* Separator */}
                     <div className="flex items-center w-full max-w-[600px] space-x-4 text-gray-400 text-sm">
